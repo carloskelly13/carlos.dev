@@ -5,3 +5,32 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+.title {
+  text-align: center;
+}
+
+.socials {
+  margin: 1rem auto;
+}
+
+.bio {
+  width: 50%;
+  font-size: 1.25rem;
+  margin: 1rem;
+  line-height: 1.75rem;
+}
+
+.socials a {
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 2rem;
+  }
+
+  .bio {
+    width: 95%;
+  }
+}
