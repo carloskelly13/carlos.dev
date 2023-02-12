@@ -1,12 +1,20 @@
 import { Syne } from "@next/font/google"
 import styles from "./page.module.css"
 import clsx from "clsx"
+import Image from "next/image"
 
 const syne = Syne({ subsets: ["latin"] })
 
 export default function Home() {
   return (
     <main className={clsx(styles.main, styles.title, syne.className)}>
+      <Image
+        className={styles.pfp}
+        src="/carlos.jpg"
+        width={175}
+        height={175}
+        alt="PFP for Carlos Kelly"
+      />
       <div className={styles.banner} />
       <h1 className={styles.firstName}>CARLOS</h1>
       <h2 className={styles.lastName}>KELLY</h2>
