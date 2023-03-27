@@ -29,7 +29,7 @@ export default function Home() {
         engineering consultancy with a focus on open-source software.
       </p>
       <div className={styles.socials}>
-        <a href="https://www.github.com/carlos-kelly">GitHub</a>
+        <a href="https://www.github.com/carloskelly13">GitHub</a>
         <a href="https://www.instagram.com/carloskelly.13">Instagram</a>
         <a href="https://www.linkedin.com/in/carlos-kelly-a10270b8/">
           LinkedIn
