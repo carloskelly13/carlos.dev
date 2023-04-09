@@ -124,5 +124,7 @@
 
   .ossProjects a svg {
     width: 100px;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
   }
 }
