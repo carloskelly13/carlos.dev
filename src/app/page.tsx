@@ -7,6 +7,11 @@ import "formidable-oss-badges/dist/style.css"
 
 const syne = Syne({ subsets: ["latin"] })
 
+export const metadata = {
+  title: "Carlos Kelly",
+  description: "Personal webpage for Carlos Kelly",
+}
+
 export default function Home() {
   return (
     <main className={clsx(styles.main, styles.title, syne.className)}>
