@@ -2,6 +2,8 @@ import { Syne } from "@next/font/google"
 import styles from "./page.module.css"
 import clsx from "clsx"
 import Image from "next/image"
+import { ProjectBadge, FeaturedBadge } from "formidable-oss-badges"
+import "formidable-oss-badges/dist/style.css"
 
 const syne = Syne({ subsets: ["latin"] })
 
@@ -29,12 +31,68 @@ export default function Home() {
         engineering consultancy with a focus on open-source software.
       </p>
       <div className={styles.socials}>
-        <a href="https://www.github.com/carlos-kelly">GitHub</a>
-        <a href="https://www.instagram.com/carloskelly.13">Instagram</a>
-        <a href="https://www.linkedin.com/in/carlos-kelly-a10270b8/">
+        <a
+          href="https://www.github.com/carloskelly13"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.instagram.com/carloskelly.13"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           LinkedIn
         </a>
-        <a href="https://twitter.com/carlos_paelinck">Twitter</a>
+        <a
+          href="https://twitter.com/carlos_paelinck"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Twitter
+        </a>
+      </div>
+      <div className={styles.ossSection}>
+        <h2>OSS Projects</h2>
+        <p>I’m a maintainer and contributor to the following OSS projects:</p>
+        <div className={styles.ossProjects}>
+          <a
+            href="https://formidable.com/open-source/spectacle"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FeaturedBadge name="spectacle" />
+            Spectacle
+          </a>
+          <a
+            href="https://formidable.com/open-source/nuka-carousel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FeaturedBadge name="nuka" />
+            Nuka Carousel
+          </a>
+          <a
+            href="https://formidable.com/open-source/react-live"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectBadge
+              abbreviation="Rl"
+              description="React Live"
+              color="#f159da"
+            />
+            React Live
+          </a>
+        </div>
       </div>
     </main>
   )

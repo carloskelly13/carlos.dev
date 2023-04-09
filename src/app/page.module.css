@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .pfp {
@@ -43,40 +43,86 @@
 
 .socials {
   border-top: 1px dotted var(--yellow);
-  padding-top: 1rem;
+  border-bottom: 1px dotted var(--yellow);
+  padding: 1rem;
   margin: 1rem auto;
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 95%;
 }
 
 .bio {
-  width: 50%;
+  width: 95%;
   font-size: 1.15rem;
   margin: 1rem;
   line-height: 2rem;
 }
 
 .socials a {
-  margin: 0 1rem;
+  margin: 0.5rem auto;
   font-weight: 700;
 }
 
-@media only screen and (max-width: 600px) {
+.ossSection {
+  width: 95%;
+  padding-top: 1rem;
+  margin: 1rem auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ossProjects {
+  margin-top: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ossProjects a {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem auto;
+}
+
+.ossProjects a svg {
+  width: 50px;
+  padding-right: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
   .main {
-    padding: 2rem;
+    padding: 5rem;
   }
 
   .bio {
-    width: 95%;
+    width: 50%;
   }
 
   .socials {
-    flex-direction: column;
-    width: 95%;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
   }
 
   .socials a {
-    margin: 0.5rem auto;
+    margin: 0 1rem;
+  }
+
+  .ossProjects {
+    flex-direction: row;
+  }
+
+  .ossProjects a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+  }
+
+  .ossProjects a svg {
+    width: 100px;
   }
 }

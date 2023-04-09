@@ -36,11 +36,11 @@ a {
   top: 0;
   color: var(--blue);
   text-decoration: none;
-  transition: top ease 0.15s;
+  /* transition: top ease 0.15s; */
 }
 
 a:hover {
-  top: 2px
+  /* top: 2px */
 }
 
 a:hover {
