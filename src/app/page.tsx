@@ -1,11 +1,11 @@
-import { Syne } from "@next/font/google"
+import { Space_Grotesk } from "@next/font/google"
 import styles from "./page.module.css"
 import clsx from "clsx"
 import Image from "next/image"
 import { ProjectBadge, FeaturedBadge } from "formidable-oss-badges"
 import "formidable-oss-badges/dist/style.css"
 
-const syne = Syne({ subsets: ["latin"] })
+const typeface = Space_Grotesk({ subsets: ["latin"], weight: ["400", "700"] })
 
 export const metadata = {
   title: "Carlos Kelly",
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className={clsx(styles.main, styles.title, syne.className)}>
+    <main className={clsx(styles.main, styles.title, typeface.className)}>
       <Image
         className={styles.pfp}
         src="/carlos.jpg"
@@ -23,17 +23,18 @@ export default function Home() {
         alt="PFP for Carlos Kelly"
       />
       <div className={styles.banner} />
-      <h1 className={styles.firstName}>CARLOS</h1>
-      <h2 className={styles.lastName}>KELLY</h2>
+      <h1 className={styles.name}>
+        <span className={styles.firstName}>Carlos</span> Kelly
+      </h1>
       <h3 className={styles.biLine}>
         Software Engineer &amp; CTO at{" "}
         <a href="https://www.formidable.com">Formidable</a>{" "}
       </h3>
       <p className={styles.bio}>
-        I build apps using web and native platform technologies. My toolkit
-        includes React, GraphQL, Node, Headless CMS, TypeScript, Swift, and
-        Kotlin. I’m the CTO at Formidable, a global design, product, and
-        engineering consultancy with a focus on open-source software.
+        I’m a software engineer building web and native apps with React,
+        GraphQL, TypeScript, Swift, and Kotlin. I’m the CTO at Formidable, a
+        global design, product, and engineering consultancy with a focus on
+        open-source software.
       </p>
       <div className={styles.socials}>
         <a
@@ -96,6 +97,18 @@ export default function Home() {
               color="#f159da"
             />
             React Live
+          </a>
+          <a
+            href="https://github.com/formidablelabs/prism-react-renderer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectBadge
+              abbreviation="Pr"
+              description="Prism React Renderer"
+              color="#5289a9"
+            />
+            Prism React Renderer
           </a>
         </div>
       </div>
