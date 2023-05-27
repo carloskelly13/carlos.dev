@@ -1,11 +1,8 @@
-import { Space_Grotesk } from "@next/font/google"
 import styles from "./page.module.css"
 import clsx from "clsx"
 import Image from "next/image"
 import { ProjectBadge, FeaturedBadge } from "formidable-oss-badges"
 import "formidable-oss-badges/dist/style.css"
-
-const typeface = Space_Grotesk({ subsets: ["latin"], weight: ["400", "700"] })
 
 export const metadata = {
   title: "Carlos Kelly",
@@ -14,7 +11,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className={clsx(styles.main, styles.title, typeface.className)}>
+    <main className={clsx(styles.main, styles.title)}>
       <Image
         className={styles.pfp}
         src="/carlos.jpg"
@@ -23,9 +20,7 @@ export default function Home() {
         alt="PFP for Carlos Kelly"
       />
       <div className={styles.banner} />
-      <h1 className={styles.name}>
-        <span className={styles.firstName}>Carlos</span> Kelly
-      </h1>
+      <h1 className={styles.name}>Carlos Kelly</h1>
       <h3 className={styles.biLine}>
         Software Engineer &amp; CTO at{" "}
         <a href="https://www.formidable.com">Formidable</a>{" "}
