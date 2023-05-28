@@ -12,13 +12,10 @@ export const metadata = {
 export default function Home() {
   return (
     <main className={clsx(styles.main, styles.title)}>
-      <Image
-        className={styles.pfp}
-        src="/carlos.jpg"
-        width={175}
-        height={175}
-        alt="PFP for Carlos Kelly"
-      />
+      <picture>
+        <source srcSet="carlos_dark.jpg" media="(prefers-color-scheme: dark)" />
+        <img className={styles.pfp} src="carlos.jpg" />
+      </picture>
       <div className={styles.banner} />
       <h1 className={styles.name}>Carlos Kelly</h1>
       <h3 className={styles.biLine}>
