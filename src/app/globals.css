@@ -4,6 +4,10 @@
 
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --yellow-300: theme('colors.yellow.300');
+  --yellow-200: theme('colors.yellow.200');
+  --yellow-100: theme('colors.yellow.100');
+  --yellow-50: theme('colors.yellow.50');
 }
 
 * {

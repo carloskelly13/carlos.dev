@@ -1,0 +1,19 @@
+.forwardDiagonalLines {
+  background: repeating-linear-gradient(
+      -45deg,
+      var(--yellow-200),
+      var(--yellow-200) 2px,
+      var(--yellow-50) 2px,
+      var(--yellow-50) 12px
+  ) repeat-x;
+}
+
+.backwardDiagonalLines {
+  background: repeating-linear-gradient(
+      45deg,
+      var(--yellow-200),
+      var(--yellow-200) 2px,
+      var(--yellow-50) 2px,
+      var(--yellow-50) 12px
+  ) repeat-x;
+}
