@@ -4,6 +4,12 @@
 
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --narwhale-grey: theme('colors.narwhale-grey');
+  --yellow-800: theme('colors.yellow.800');
+  --yellow-700: theme('colors.yellow.700');
+  --yellow-600: theme('colors.yellow.600');
+  --yellow-500: theme('colors.yellow.500');
+  --yellow-400: theme('colors.yellow.400');
   --yellow-300: theme('colors.yellow.300');
   --yellow-200: theme('colors.yellow.200');
   --yellow-100: theme('colors.yellow.100');
