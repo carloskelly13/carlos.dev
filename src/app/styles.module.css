@@ -2,18 +2,25 @@
 .diagonalLines {
   background: repeating-linear-gradient(
       -45deg,
-      var(--yellow-400),
-      var(--yellow-400) 2px,
-      var(--yellow-300) 2px,
-      var(--yellow-300) 12px
+      var(--yellow-100),
+      var(--yellow-100) 2px,
+      var(--yellow-50) 2px,
+      var(--yellow-50) 12px
   ) repeat-x;
 }
 
 .textShadow {
   text-shadow:
-      1px 1px 0 var(--yellow-50),
+      1px 1px 0 var(--yellow-300),
+      1px 2px 0 var(--yellow-600),
+      1px 3px 0 var(--yellow-600),
+      1px 4px 0 var(--yellow-700),
+      1px 5px 5px hsla(0, 0%, 0%, 0.5);
+}
+
+.boxShadow {
+  box-shadow:
+      1px 1px 0 var(--yellow-400),
       1px 2px 0 var(--yellow-500),
-      1px 3px 0 var(--yellow-500),
-      1px 4px 0 var(--yellow-600),
-      1px 5px 5px var(--yellow-700);
+      1px 3px 0 var(--yellow-500);
 }
