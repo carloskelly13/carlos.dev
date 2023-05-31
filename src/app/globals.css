@@ -34,6 +34,6 @@ body {
   }
 
   html, body {
-    @apply bg-indigo-900;
+    @apply bg-indigo-800;
   }
 }

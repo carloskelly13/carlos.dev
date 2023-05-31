@@ -1,8 +1,7 @@
-import type { PropsWithChildren, ReactNode } from "react"
+import type { PropsWithChildren } from "react"
 import clsx from "clsx"
 import Image from "next/image"
 import colors from "tailwindcss/colors"
-import { Archivo_Black, Archivo_Narrow, Literata } from "@next/font/google"
 import {
   RiGithubFill,
   RiInstagramFill,
@@ -10,7 +9,11 @@ import {
   RiTwitterFill,
 } from "react-icons/ri"
 import { CgArrowTopRight, CgArrowRight } from "react-icons/cg"
-import styles from "./styles.module.css"
+import { Name } from "@/components/name"
+import { Project } from "@/components/project"
+import { serifTypeface, subHeaderTypeface } from "@/components/typefaces"
+import { ContentBox } from "@/components/contentBox"
+import { Link } from "@/components/link"
 
 export const metadata = {
   title: "Carlos Kelly",
@@ -22,87 +25,6 @@ const socialMediaIconSize = 32
 const containerSelectors = "w-full md:w-3/4 lg:w-3/5"
 const iconSelectors = clsx(
   "mx-2 transition hover:text-yellow-300 hover:scale-125 first:ml-0 last:mr-0"
-)
-
-const headerTypeface = Archivo_Black({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-})
-
-const subHeaderTypeface = Archivo_Narrow({
-  weight: ["700"],
-  style: ["italic"],
-  subsets: ["latin"],
-})
-
-const serifTypeface = Literata({
-  weight: ["400"],
-  style: ["italic"],
-  subsets: ["latin"],
-})
-
-const Link = ({
-  to,
-  children,
-  className,
-}: PropsWithChildren<{ to: string; className?: string }>) => (
-  <a
-    href={to}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={clsx(
-      subHeaderTypeface.className,
-      "transition-all hover:text-yellow-300 flex flex-row items-center hover:scale-105",
-      className
-    )}
-  >
-    {children}
-  </a>
-)
-
-const Project = ({
-  children,
-  title,
-}: PropsWithChildren<{ title: ReactNode }>) => (
-  <div className="my-6">
-    <div
-      className={clsx(
-        subHeaderTypeface.className,
-        "pl-1 z-10 relative text-yellow-300 text-xl md:text-2xl italic font-black"
-      )}
-    >
-      {title}
-    </div>
-    <div className={clsx("mx-1 text-white")}>{children}</div>
-  </div>
-)
-
-const ContentBox = ({
-  children,
-  title,
-  className,
-}: PropsWithChildren<{ title: string; className?: string }>) => (
-  <section className={clsx(containerSelectors, "self-center", className)}>
-    <div
-      className={clsx("font-extrabold italic text-xl relative mx-4 md:mx-1")}
-    >
-      <div
-        className={clsx(
-          "bg-black/20 absolute w-full h-2 z-0 bottom-[4px] -skew-x-12 rounded-sm"
-        )}
-      />
-      <span
-        className={clsx(
-          headerTypeface.className,
-          "pl-1 z-10 relative text-yellow-300 text-xl md:text-2xl uppercase"
-        )}
-      >
-        {title}
-      </span>
-    </div>
-    <div className={clsx("mx-4 md:mx-1")}>{children}</div>
-  </section>
 )
 
 export default function Home() {
@@ -132,20 +54,13 @@ export default function Home() {
               src="https://res.cloudinary.com/dqlrwmfsu/image/upload/v1685371891/carlos.dev/carlos-transparent_xlulal.png"
               alt="Carlos Kelly Profile Image"
             />
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-start relative">
+              <Name />
               <div
                 className={clsx(
-                  styles.textShadow,
-                  headerTypeface.className,
-                  "text-2xl md:text-4xl text-center",
-                  "uppercase text-opacity-70 text-transparent"
-                )}
-              >
-                Carlos Kelly
-              </div>
-              <div
-                className={clsx(
-                  "flex mt-1 md:mt-2 flex-row items-center justify-left text-white text-opacity-80"
+                  "absolute top-12 z-0",
+                  "flex mt-1.5 md:mt-2.5 flex-row items-center",
+                  "justify-left text-white text-opacity-80"
                 )}
               >
                 <a
@@ -206,7 +121,7 @@ export default function Home() {
         open-source software.
       </section>
 
-      <ContentBox title="Open Source">
+      <ContentBox className={clsx(containerSelectors)} title="Open Source">
         <Project title="Spectacle">
           A React-based library for creating sleek presentations using JSX
           syntax that gives you the ability to live demo your code. &nbsp;
@@ -262,7 +177,10 @@ export default function Home() {
           </div>
         </Project>
       </ContentBox>
-      <ContentBox className="mt-4" title="Work History">
+      <ContentBox
+        className={clsx(containerSelectors, "mt-4")}
+        title="Work History"
+      >
         <Project title="Formidable">
           <div className={clsx(subHeaderTypeface.className, "mt-1.5")}>
             CTO: 2022 <CgArrowRight className="mb-0.5 inline" /> present
