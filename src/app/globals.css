@@ -4,7 +4,6 @@
 
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --narwhale-grey: theme('colors.narwhale-grey');
   --yellow-800: theme('colors.yellow.800');
   --yellow-700: theme('colors.yellow.700');
   --yellow-600: theme('colors.yellow.600');
@@ -14,6 +13,7 @@
   --yellow-200: theme('colors.yellow.200');
   --yellow-100: theme('colors.yellow.100');
   --yellow-50: theme('colors.yellow.50');
+  --bg: theme('colors.violet.500');
 }
 
 * {
@@ -25,15 +25,14 @@
 html,
 body {
   font-family: var(--system-ui);
-  @apply bg-indigo-500;
+  background-color: var(--bg);
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --bg: theme('colors.violet.950');
+  }
   html {
     color-scheme: dark;
-  }
-
-  html, body {
-    @apply bg-indigo-800;
   }
 }

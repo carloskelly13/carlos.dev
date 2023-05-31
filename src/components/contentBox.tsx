@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react"
 import clsx from "clsx"
 import { headerTypeface } from "@/components/typefaces"
+import styles from "@/components/styles.module.css"
 
 export const ContentBox = ({
   children,
@@ -13,13 +14,14 @@ export const ContentBox = ({
     >
       <div
         className={clsx(
-          "bg-black/20 absolute w-full h-2 z-0 bottom-[4px] -skew-x-12 rounded-sm"
+          "bg-black/20 absolute w-full h-2 z-0 bottom-0.5 -skew-x-12 rounded-sm"
         )}
       />
       <span
         className={clsx(
           headerTypeface.className,
-          "pl-1 z-10 relative text-yellow-300 text-xl md:text-2xl uppercase"
+          styles.textShadowSmall,
+          "pl-1 z-10 relative text-transparent text-xl md:text-2xl uppercase"
         )}
       >
         {title}
