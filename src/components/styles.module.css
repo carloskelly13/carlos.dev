@@ -2,10 +2,10 @@
 .diagonalLines {
   background: repeating-linear-gradient(
       -45deg,
-      var(--yellow-100),
-      var(--yellow-100) 2px,
-      var(--yellow-50) 2px,
-      var(--yellow-50) 12px
+      var(--stripe-light),
+      var(--stripe-light) 2px,
+      var(--stripe-dark) 2px,
+      var(--stripe-dark) 12px
   ) repeat-x;
 }
 

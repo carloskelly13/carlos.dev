@@ -1,4 +1,4 @@
-import { Archivo_Black, Archivo_Narrow, Literata } from "@next/font/google"
+import { Archivo_Black, Archivo_Narrow, Archivo } from "@next/font/google"
 
 export const headerTypeface = Archivo_Black({
   weight: ["400"],
@@ -12,8 +12,8 @@ export const subHeaderTypeface = Archivo_Narrow({
   subsets: ["latin"],
 })
 
-export const serifTypeface = Literata({
+export const copyTypeface = Archivo({
   weight: ["400"],
-  style: ["italic"],
+  style: ["normal"],
   subsets: ["latin"],
 })

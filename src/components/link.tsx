@@ -13,7 +13,7 @@ export const Link = ({
     rel="noopener noreferrer"
     className={clsx(
       subHeaderTypeface.className,
-      "transition-all hover:text-yellow-300 flex flex-row items-center hover:scale-105",
+      "transition-all flex flex-row items-center hover:scale-110",
       className
     )}
   >

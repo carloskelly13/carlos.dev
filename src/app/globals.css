@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "ITCGaramondStdLightNarrow";
+  src: url('/webFonts/ITCGaramondStdLightNarrow/font.woff2') format('woff2'), url('/webFonts/ITCGaramondStdLightNarrow/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: "ITCGaramondStdBookNarrowItalic";
+  src: url('/webFonts/ITCGaramondStdBookNarrowItalic/font.woff2') format('woff2'), url('/webFonts/ITCGaramondStdBookNarrowItalic/font.woff') format('woff');
+}
+
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --yellow-800: theme('colors.yellow.800');
@@ -13,7 +23,9 @@
   --yellow-200: theme('colors.yellow.200');
   --yellow-100: theme('colors.yellow.100');
   --yellow-50: theme('colors.yellow.50');
-  --bg: theme('colors.violet.500');
+  --primary: theme('colors.carlos-0');
+  --stripe-dark: theme('colors.carlos--35');
+  --stripe-light: theme('colors.carlos--30');
 }
 
 * {
@@ -24,13 +36,15 @@
 
 html,
 body {
-  font-family: var(--system-ui);
-  background-color: var(--bg);
+  font-family: ITCGaramondStdLightNarrow, serif;
+  background-color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: theme('colors.violet.950');
+    --primary: theme('colors.carlos-65');
+    --stripe-dark: theme('colors.carlos-60');
+    --stripe-light: theme('colors.carlos-55');
   }
   html {
     color-scheme: dark;
