@@ -21,7 +21,7 @@ export const ContentBox = ({
         className={clsx(
           headerTypeface.className,
           styles.textShadowSmall,
-          "pl-1 z-10 relative text-transparent text-xl md:text-2xl uppercase"
+          "pl-1 z-10 relative text-transparent text-2xl md:text-3xl uppercase"
         )}
       >
         {title}
