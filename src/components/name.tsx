@@ -19,25 +19,28 @@ export const Name = ({ className }: Props) => {
   return (
     <>
       <div className="absolute top-0 h-[40px]" ref={ref} />
-      <div
-        className={clsx(
-          "fixed bg-transparent h-0 transition-all duration-150",
-          "delay-75 motion-reduce:transition-none z-40",
-          "bg-carlos-20 dark:bg-carlos-55 shadow-2xl left-0 top-0",
-          "bg-opacity-50 dark:bg-opacity-50 backdrop-blur-lg w-screen",
-          isElementHidden && "h-[50px] md:h-[65px]"
-        )}
-      />
+      {isElementHidden && (
+        <div
+          className={clsx(
+            "fixed h-14 duration-150",
+            "delay-75 motion-reduce:transition-none z-40",
+            "shadow-2xl left-0 top-0",
+            "backdrop-blur-xl w-screen"
+          )}
+        >
+          &nbsp;
+        </div>
+      )}
       <div
         role={isElementHidden ? "button" : "heading"}
         onClick={isElementHidden ? handleScrollToTop : undefined}
         className={clsx(
-          "transition-all duration-150 delay-75 motion-reduce:transition-none",
+          "transition-all duration-200 delay-75 motion-reduce:transition-none",
           "text-2xl md:text-4xl text-center pt-3 sticky top-0",
           "uppercase text-opacity-70 text-transparent z-50 px-4",
           isElementHidden && [
-            "cursor-pointer hover:scale-110 !fixed -top-1 md:top-0",
-            "-translate-x-[6.67rem] md:-translate-x-[8.5rem] lg:-translate-x-[7.33rem]",
+            "cursor-pointer !fixed -top-1 md:-top-0.5",
+            "-translate-x-[6.67rem] md:-translate-x-[10rem] lg:-translate-x-[9.25rem] md:scale-[80%]",
           ],
           styles.textShadow,
           headerTypeface.className,

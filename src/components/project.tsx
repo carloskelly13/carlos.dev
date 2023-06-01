@@ -1,6 +1,5 @@
 import { PropsWithChildren, ReactNode } from "react"
 import clsx from "clsx"
-import { subHeaderTypeface } from "@/components/typefaces"
 
 type Props = PropsWithChildren<{ title: ReactNode; className?: string }>
 
@@ -9,8 +8,7 @@ export const Project = ({ children, title, className }: Props) => (
     <div
       className={clsx(
         "pl-1 z-10 relative text-carlos-60 dark:text-carlos--60",
-        "text-2xl md:text-4xl italic font-copy-emphasis lowercase",
-        // subHeaderTypeface.className,
+        "text-2xl md:text-4xl font-copy-emphasis lowercase",
         className
       )}
     >
