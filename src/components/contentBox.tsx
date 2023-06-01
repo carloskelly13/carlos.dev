@@ -9,9 +9,7 @@ export const ContentBox = ({
   className,
 }: PropsWithChildren<{ title: string; className?: string }>) => (
   <section className={clsx("self-center", className)}>
-    <div
-      className={clsx("font-extrabold italic text-xl relative mx-4 md:mx-1")}
-    >
+    <div className={clsx("italic text-xl relative mx-4 md:mx-1")}>
       <div
         className={clsx(
           "bg-gradient-to-r from-carlos-20/70 dark:from-carlos-20/40 to-carlos-0/0 absolute rounded-sm",
@@ -22,7 +20,7 @@ export const ContentBox = ({
         className={clsx(
           headerTypeface.className,
           styles.textShadowSmall,
-          "pl-1 z-10 relative text-transparent text-2xl uppercase"
+          "pl-1 z-10 relative text-transparent text-2xl uppercase tracking-tighter"
         )}
       >
         {title}

@@ -1,11 +1,20 @@
 import { RefObject, useCallback, useEffect, useState } from "react"
 
-export const useElementScroll = (ref: RefObject<HTMLDivElement | null>) => {
+type Options = {
+  triggerRef: RefObject<HTMLDivElement | null>
+  targetRef: RefObject<HTMLDivElement | null>
+}
+export const useElementScroll = (options: Options) => {
   const [isElementHidden, setIsElementHidden] = useState(false)
   const handleScroll = useCallback(() => {
-    if (ref.current == null) return
-    const offset = ref.current?.getBoundingClientRect().top
-    const hidden = offset <= 0
+    if (options.triggerRef.current == null || options.targetRef.current == null)
+      return
+    const offset = options.triggerRef.current.getBoundingClientRect().top
+    const parentHeight =
+      options.targetRef.current?.parentElement?.getBoundingClientRect()
+        .height || 100
+
+    const hidden = offset <= -(parentHeight / 2) - 20
     setIsElementHidden(hidden)
   }, [])
   useEffect(() => {

@@ -21,18 +21,15 @@ export const metadata = {
   themeColor: colors.yellow["300"],
 }
 
-const socialMediaIconSize = 32
 const containerSelectors = "w-full md:w-3/4 lg:w-3/5"
-const iconSelectors = clsx(
-  "mx-2 transition hover:text-yellow-300 hover:scale-125 first:ml-0 last:mr-0"
-)
+const copySelectors = "text-lg md:text-xl mt-2"
 
 export default function Home() {
   return (
     <>
       <main
         className={clsx(
-          "mb-2 md:my-12 mx-auto h-full flex flex-col text-carlos-80 dark:text-carlos--80 max-w-7xl",
+          "mb-8 md:my-12 mx-auto h-full flex flex-col text-carlos-80 dark:text-carlos--80 max-w-7xl",
           "font-copy"
         )}
       >
@@ -44,7 +41,7 @@ export default function Home() {
               "relative flex flex-col justify-center items-start pt-8 lg:py-8 mx-4 lg:mx-0"
             )}
           >
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center">
               <Image
                 className={clsx(
                   "w-[5.5rem] h-[5.5rem] md:w-[6.25rem] md:h-[6.25rem]",
@@ -55,57 +52,7 @@ export default function Home() {
                 src="https://res.cloudinary.com/dqlrwmfsu/image/upload/v1685371891/carlos.dev/carlos-transparent_xlulal.png"
                 alt="Carlos Kelly Profile Image"
               />
-              <div className="flex flex-col justify-start relative">
-                <Name />
-                <div
-                  className={clsx(
-                    "absolute top-12 z-0 px-4",
-                    "flex mt-1.5 md:mt-2.5 flex-row items-center",
-                    "justify-left text-carlos-55 dark:text-carlos--55/75"
-                  )}
-                >
-                  <a
-                    href="https://www.github.com/carloskelly13"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                    className={iconSelectors}
-                  >
-                    <RiGithubFill size={socialMediaIconSize} />
-                    <span className="sr-only">GitHub</span>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/carloskelly.13"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Instagram"
-                    className={iconSelectors}
-                  >
-                    <RiInstagramFill size={socialMediaIconSize} />
-                    <span className="sr-only">Instagram</span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="LinkedIn"
-                    className={iconSelectors}
-                  >
-                    <RiLinkedinBoxFill size={socialMediaIconSize} />
-                    <span className="sr-only">LinkedIn</span>
-                  </a>
-                  <a
-                    href="https://twitter.com/carlos_paelinck"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Twitter"
-                    className={iconSelectors}
-                  >
-                    <RiTwitterFill size={socialMediaIconSize} />
-                    <span className="sr-only">Twitter</span>
-                  </a>
-                </div>
-              </div>
+              <Name />
             </div>
           </div>
         </section>
@@ -113,7 +60,7 @@ export default function Home() {
           className={clsx(
             containerSelectors,
             "px-4 md:px-1 self-center mt-10 mb-8 md:mt-8 md:mb-10 text-xl md:text-3xl",
-            "leading-relaxed md:leading-[3rem] text-left"
+            "leading-relaxed md:leading-[3rem] text-left font-copy"
           )}
         >
           I’m a <span className="font-copy-emphasis">software engineer</span>{" "}
@@ -142,7 +89,7 @@ export default function Home() {
 
         <ContentBox className={clsx(containerSelectors)} title="Open Source">
           <Project title="Spectacle">
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               A React-based library for creating sleek presentations using JSX
               syntax that gives you the ability to live demo your code.
             </div>
@@ -159,7 +106,7 @@ export default function Home() {
             </div>
           </Project>
           <Project title="Nuka Carousel">
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               Small, fast, and accessibility-first React carousel library with
               an easily customizable UI and behavior to fit your brand and site.
             </div>
@@ -176,7 +123,7 @@ export default function Home() {
             </div>
           </Project>
           <Project title="React Live">
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               A flexible playground for live editing React components with
               editable source code and live preview.
             </div>
@@ -193,7 +140,7 @@ export default function Home() {
             </div>
           </Project>
           <Project title="Prism React Renderer">
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               A way to render syntax highlighted code using React components and
               PrismJS.
             </div>
@@ -205,24 +152,24 @@ export default function Home() {
           </Project>
         </ContentBox>
         <ContentBox
-          className={clsx(containerSelectors, "mt-4")}
+          className={clsx(containerSelectors, "mt-16")}
           title="Work History"
         >
           <Project title="Formidable">
-            <div className={clsx(subHeaderTypeface.className, "mt-1.5")}>
+            <div
+              className={clsx(subHeaderTypeface.className, "mt-1.5 font-bold")}
+            >
               CTO: 2022 <CgArrowRight className="mb-0.5 inline" /> present
             </div>
-            <div className={clsx(subHeaderTypeface.className, "text-lg")}>
+            <div className={clsx(subHeaderTypeface.className)}>
               Director of Engineering: 2020{" "}
               <CgArrowRight className="mb-0.5 inline" /> 2022
             </div>
-            <div
-              className={clsx(subHeaderTypeface.className, "mb-1.5 text-lg")}
-            >
+            <div className={clsx(subHeaderTypeface.className, "mb-1.5")}>
               Principal Software Engineer & Engineering Manager: 2016{" "}
               <CgArrowRight className="mb-0.5 inline" /> 2020
             </div>
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               As CTO, I head up the engineering organization and manage the
               engineering leadership team. I work with our technical partners to
               advance our engineering offerings and empower our teams to build
@@ -235,11 +182,13 @@ export default function Home() {
             </div>
           </Project>
           <Project title="Modus Create">
-            <div className={clsx(subHeaderTypeface.className, "my-1.5")}>
+            <div
+              className={clsx(subHeaderTypeface.className, "my-1.5 font-bold")}
+            >
               Senior Software Engineer: 2015{" "}
               <CgArrowRight className="mb-0.5 inline" /> 2016
             </div>
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               Led the front-end development efforts of several lab projects for
               Marriott. Projects ranged from web applications to native iOS
               applications. Worked on a rewrite of a regional product site using
@@ -247,11 +196,13 @@ export default function Home() {
             </div>
           </Project>
           <Project title="Object Systems Group">
-            <div className={clsx(subHeaderTypeface.className, "my-1.5")}>
+            <div
+              className={clsx(subHeaderTypeface.className, "my-1.5 font-bold")}
+            >
               Software Engineer: 2010 <CgArrowRight className="mb-0.5 inline" />{" "}
               2015
             </div>
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               Consulted for the Barclaycard Bespoke Offers iOS native app using
               UIKit and Objective-C. My daily responsibilities included sprint
               planning, working with product owners on design and experience,
@@ -260,11 +211,13 @@ export default function Home() {
             </div>
           </Project>
           <Project title="Las Vegas Gaming Inc.">
-            <div className={clsx(subHeaderTypeface.className, "my-1.5")}>
+            <div
+              className={clsx(subHeaderTypeface.className, "my-1.5 font-bold")}
+            >
               Software Engineer: 2008 <CgArrowRight className="mb-0.5 inline" />{" "}
               2010
             </div>
-            <div className="text-xl md:text-2xl mt-2">
+            <div className={copySelectors}>
               Assisted software development by co-designing the interface and
               unit testing for a slot machine entertainment portal macOS
               application written in Cocoa and Objective-C.
