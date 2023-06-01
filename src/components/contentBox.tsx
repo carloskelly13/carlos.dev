@@ -15,14 +15,14 @@ export const ContentBox = ({
       <div
         className={clsx(
           "bg-gradient-to-r from-carlos-20/70 dark:from-carlos-20/40 to-carlos-0/0 absolute rounded-sm",
-          "w-[33rem] h-[2.125rem] z-0 bottom-0.5 -skew-x-12 -left-1"
+          "w-full h-[2.125rem] z-0 -skew-x-12 -left-1"
         )}
       />
       <span
         className={clsx(
           headerTypeface.className,
           styles.textShadowSmall,
-          "pl-1 z-10 relative text-transparent text-2xl md:text-3xl uppercase"
+          "pl-1 z-10 relative text-transparent text-2xl uppercase"
         )}
       >
         {title}
