@@ -37,7 +37,7 @@
 html,
 body {
   font-family: ITCGaramondStdLightNarrow, serif;
-  background-color: var(--primary);
+  @apply bg-gradient-to-t from-white to-carlos-0 dark:from-carlos-65 dark:to-carlos-80;
 }
 
 @media (prefers-color-scheme: dark) {

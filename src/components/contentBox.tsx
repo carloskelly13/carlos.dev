@@ -14,7 +14,8 @@ export const ContentBox = ({
     >
       <div
         className={clsx(
-          "bg-carlos-80/40 dark:bg-carlos--80/20 absolute w-full h-2 z-0 bottom-0.5 -skew-x-12 rounded-sm"
+          "bg-gradient-to-r from-carlos-20/70 dark:from-carlos-20/40 to-carlos-0/0 absolute rounded-sm",
+          "w-[33rem] h-[2.125rem] z-0 bottom-0.5 -skew-x-12 -left-1"
         )}
       />
       <span

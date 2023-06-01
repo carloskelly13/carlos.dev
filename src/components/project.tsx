@@ -8,8 +8,9 @@ export const Project = ({ children, title, className }: Props) => (
   <div className="my-8 md:my-10 first:my-6">
     <div
       className={clsx(
-        "pl-1 z-10 relative text-carlos-60 dark:text-carlos--60 text-xl md:text-2xl italic font-black",
-        subHeaderTypeface.className,
+        "pl-1 z-10 relative text-carlos-60 dark:text-carlos--60",
+        "text-2xl md:text-4xl italic font-copy-emphasis lowercase",
+        // subHeaderTypeface.className,
         className
       )}
     >
@@ -17,7 +18,8 @@ export const Project = ({ children, title, className }: Props) => (
     </div>
     <div
       className={clsx(
-        "mx-1 mt-1 leading-relaxed text-carlos-80 dark:text-carlos--80"
+        "mx-1 mt-1 leading-relaxed text-carlos-80 dark:text-carlos--80",
+        "border-l-4 border-dotted pl-4 border-carlos-30"
       )}
     >
       {children}

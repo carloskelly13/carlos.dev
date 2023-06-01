@@ -10,7 +10,7 @@ import {
 import { CgArrowTopRight, CgArrowRight } from "react-icons/cg"
 import { Name } from "@/components/name"
 import { Project } from "@/components/project"
-import { copyTypeface, subHeaderTypeface } from "@/components/typefaces"
+import { subHeaderTypeface } from "@/components/typefaces"
 import { ContentBox } from "@/components/contentBox"
 import { Link } from "@/components/link"
 import { Footer } from "@/components/footer"
@@ -125,11 +125,19 @@ export default function Home() {
             rel="noopener noreferrer"
             className={clsx("inline font-copy-emphasis group")}
           >
-            <span className="hover:underline">Formidable</span>{" "}
-            <CgArrowTopRight className="inline mb-0.5 -ml-2 transition-all group-hover:-translate-y-1" />
+            <span className="inline-block">
+              <span className="hover:underline">Formidable</span>{" "}
+              <CgArrowTopRight
+                className={clsx(
+                  "inline mb-0.5 -ml-2 transition-all",
+                  "group-hover:-translate-y-1 group-hover:translate-x-0.5"
+                )}
+              />
+              ,
+            </span>
           </a>
-          , a global design, product, and engineering consultancy with a focus
-          on open-source software.
+          &nbsp;a global design, product, and engineering consultancy with a
+          focus on open-source software.
         </section>
 
         <ContentBox className={clsx(containerSelectors)} title="Open Source">
@@ -140,13 +148,13 @@ export default function Home() {
             </div>
             <div className="flex flex-row pt-1">
               <Link to="https://github.com/FormidableLabs/spectacle">
-                GitHub <CgArrowTopRight />
+                GitHub
               </Link>
               <Link
                 className="ml-2"
                 to="https://formidable.com/open-source/spectacle/docs/"
               >
-                Docs <CgArrowTopRight />
+                Docs
               </Link>
             </div>
           </Project>
@@ -157,13 +165,13 @@ export default function Home() {
             </div>
             <div className="flex flex-row pt-1">
               <Link to="https://github.com/FormidableLabs/nuka-carousel">
-                GitHub <CgArrowTopRight />
+                GitHub
               </Link>
               <Link
                 className="ml-2"
                 to="https://formidable.com/open-source/nuka-carousel/"
               >
-                Docs <CgArrowTopRight />
+                Docs
               </Link>
             </div>
           </Project>
@@ -174,13 +182,13 @@ export default function Home() {
             </div>
             <div className="flex flex-row pt-1">
               <Link to="https://github.com/FormidableLabs/react-live">
-                GitHub <CgArrowTopRight />
+                GitHub
               </Link>
               <Link
                 className="ml-2"
                 to="https://formidable.com/open-source/react-live/"
               >
-                Docs <CgArrowTopRight />
+                Docs
               </Link>
             </div>
           </Project>
@@ -191,7 +199,7 @@ export default function Home() {
             </div>
             <div className="flex flex-row pt-1">
               <Link to="https://github.com/FormidableLabs/prism-react-renderer">
-                GitHub <CgArrowTopRight />
+                GitHub
               </Link>
             </div>
           </Project>
@@ -251,7 +259,7 @@ export default function Home() {
               backend services for health organizations using Java and Spring.
             </div>
           </Project>
-          <Project title="Las Vegas Gaming">
+          <Project title="Las Vegas Gaming Inc.">
             <div className={clsx(subHeaderTypeface.className, "my-1.5")}>
               Software Engineer: 2008 <CgArrowRight className="mb-0.5 inline" />{" "}
               2010
