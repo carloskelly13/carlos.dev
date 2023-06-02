@@ -87,7 +87,15 @@ export default function Home() {
           focus on open-source software.
         </section>
 
-        <ContentBox className={clsx(containerSelectors)} title="Open Source">
+        <ContentBox
+          className={clsx(containerSelectors)}
+          title={
+            <>
+              <span className="text-[2.5rem]">Open</span>
+              <span>Source</span>
+            </>
+          }
+        >
           <Project title="Spectacle">
             <div className={copySelectors}>
               A React-based library for creating sleek presentations using JSX
@@ -153,7 +161,12 @@ export default function Home() {
         </ContentBox>
         <ContentBox
           className={clsx(containerSelectors, "mt-16")}
-          title="Work History"
+          title={
+            <>
+              <span>Work</span>
+              <span>History</span>
+            </>
+          }
         >
           <Project title="Formidable">
             <div

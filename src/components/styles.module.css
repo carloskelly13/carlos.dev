@@ -1,3 +1,8 @@
+@keyframes bk-linear-gradient-animation {
+  0% {
+    background-position: 100% 100%;
+  }
+}
 
 .diagonalLines {
   background: repeating-linear-gradient(
@@ -7,6 +12,8 @@
       var(--stripe-dark) 2px,
       var(--stripe-dark) 12px
   ) repeat-x;
+  background-size: 400% 400%;
+  animation: bk-linear-gradient-animation 240s linear infinite;
 }
 
 .textShadow {
@@ -18,13 +25,45 @@
       1px 5px 5px hsla(0, 0%, 0%, 0.5);
 }
 
-.textShadowSmall {
-  text-shadow:
-      1px 1px 0 var(--yellow-300),
-      1px 2px 0 var(--yellow-600),
-      1px 3px 3px hsla(0, 0%, 0%, 0.5);
+.perspectiveContainer {
+
 }
 
+.perspective {
+  @apply text-carlos-65 dark:text-carlos--35;
+  @apply block h-14 mt-6 mb-4;
+}
+
+.perspective span {
+  @apply transition-all duration-200 motion-reduce:transition-none ease-in-out;
+  @apply relative inline-block h-8;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+
+/*.perspectiveContainer .perspective span:nth-child(odd) {*/
+/*  transform: skew(0, -10deg)*/
+/*}*/
+
+/*.perspectiveContainer .perspective span:nth-child(even) {*/
+/*  transform: skew(30deg, -10deg) scaleY(0.667) translate(-7.5rem, 0.35rem);*/
+/*  text-shadow:*/
+/*      -1px 2px 0 hsla(0, 0%, 0%, 0.1),*/
+/*      -2px 3px 2px hsla(0, 0%, 0%, 0.1);*/
+/*}*/
+
+.perspectiveContainer .perspective span:nth-child(odd) {
+  transform: skew(0, -8deg) translate(0.5rem, 0rem);
+  @apply text-carlos-55 dark:text-carlos--55;
+}
+
+.perspectiveContainer .perspective span:nth-child(even) {
+  @apply text-carlos-40 dark:text-carlos--60;
+  transform: skew(30deg, -8deg) scaleY(0.667) translate(-7.5rem, 0.75rem);
+  text-shadow:
+      0 1px 0 hsla(0, 0%, 0%, 0.1),
+      0 2px 2px hsla(0, 0%, 0%, 0.1);
+}
 
 .boxShadow {
   box-shadow:

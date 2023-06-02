@@ -37,8 +37,7 @@ export const Footer = () => {
   return (
     <footer
       className={clsx(
-        styles.diagonalLines,
-        "w-full border-carlos-15 dark:border-carlos-55 border-t text-carlos-80 dark:text-carlos--80 text-copy py-3"
+        "w-full bg-carlos-15 dark:bg-carlos-55 border-t text-carlos-80 dark:text-carlos--80 text-copy h-4"
       )}
     ></footer>
   )

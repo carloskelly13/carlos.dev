@@ -7,20 +7,16 @@ export const ContentBox = ({
   children,
   title,
   className,
-}: PropsWithChildren<{ title: string; className?: string }>) => (
-  <section className={clsx("self-center", className)}>
-    <div className={clsx("italic text-xl relative mx-4 md:mx-1")}>
-      <div
-        className={clsx(
-          "bg-gradient-to-r from-carlos-20/70 dark:from-carlos-20/40 to-carlos-0/0 absolute rounded-sm",
-          "w-full h-[2.125rem] z-0 -skew-x-12 -left-1"
-        )}
-      />
+}: PropsWithChildren<{ title: React.ReactNode; className?: string }>) => (
+  <section
+    className={clsx("self-center", className, styles.perspectiveContainer)}
+  >
+    <div className={clsx("text-xl relative mx-4 md:mx-1")}>
       <span
         className={clsx(
           headerTypeface.className,
-          styles.textShadowSmall,
-          "pl-1 z-10 relative text-transparent text-2xl uppercase tracking-tighter"
+          styles.perspective,
+          "pl-1 z-10 relative text-4xl uppercase tracking-tighter"
         )}
       >
         {title}

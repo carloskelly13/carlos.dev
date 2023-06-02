@@ -24,6 +24,8 @@
   --yellow-100: theme('colors.yellow.100');
   --yellow-50: theme('colors.yellow.50');
   --primary: theme('colors.carlos-0');
+  --header-text: theme('colors.carlos-40');
+  --header-shadow: hsla(0, 0%, 0%, 0.10);
   --stripe-dark: theme('colors.carlos--35');
   --stripe-light: theme('colors.carlos--30');
 }
@@ -45,6 +47,8 @@ body {
     --primary: theme('colors.carlos-65');
     --stripe-dark: theme('colors.carlos-60');
     --stripe-light: theme('colors.carlos-55');
+    --header-text: theme('colors.carlos-20');
+    --header-shadow: theme('colors.carlos-60');
   }
   html {
     color-scheme: dark;
