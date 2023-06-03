@@ -1,108 +1,122 @@
-import styles from "./page.module.css"
 import clsx from "clsx"
 import Image from "next/image"
-import { ProjectBadge, FeaturedBadge } from "formidable-oss-badges"
-import "formidable-oss-badges/dist/style.css"
+import { Link } from "@/components/link"
+import colors from "tailwindcss/colors"
+import {
+  RiGithubFill,
+  RiInstagramFill,
+  RiLinkedinBoxFill,
+  RiTwitterFill,
+} from "react-icons/ri"
+import { Name } from "@/components/name"
+import { ossProjectData } from "@/components/oss-project-data"
+import { OssProject } from "@/components/oss-project"
 
 export const metadata = {
   title: "Carlos Kelly",
   description: "Personal webpage for Carlos Kelly",
+  themeColor: colors.yellow["300"],
 }
+
+const socialMediaIconSize = 28
+const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
 
 export default function Home() {
   return (
-    <main className={clsx(styles.main, styles.title)}>
-      <picture>
-        <source srcSet="carlos_dark.jpg" media="(prefers-color-scheme: dark)" />
-        <img className={styles.pfp} src="carlos.jpg" />
-      </picture>
-      <div className={styles.banner} />
-      <h1 className={styles.name}>Carlos Kelly</h1>
-      <h3 className={styles.biLine}>
-        Software Engineer &amp; CTO at{" "}
-        <a href="https://www.formidable.com">Formidable</a>{" "}
+    <main className={clsx("flex flex-col items-center w-full")}>
+      <div className={clsx("flex flex-col items-center mt-12")}>
+        <Image
+          className={clsx(
+            "rounded-full h-32 w-32 bg-gradient-to-t from-slate-100 to-slate-300 mb-4"
+          )}
+          width={400}
+          height={400}
+          src="https://res.cloudinary.com/dqlrwmfsu/image/upload/v1685371891/carlos.dev/carlos-transparent_xlulal.png"
+          alt="Carlos Kelly Profile Image"
+        />
+        <Name>Carlos Kelly</Name>
+      </div>
+      <h3
+        className={clsx(
+          containerSelectors,
+          "font-emphasis text-2xl md:text-3xl mt-4 mb-2 text-center"
+        )}
+      >
+        Software Engineer &amp; CTO at&nbsp;
+        <Link className="inline" to="https://www.formidable.com">
+          Formidable
+        </Link>
       </h3>
-      <p className={styles.bio}>
+      <p
+        className={clsx(
+          containerSelectors,
+          "text-lg md:text-xl text-center my-4 !leading-loose"
+        )}
+      >
         I’m a software engineer building web and native apps with React,
         GraphQL, TypeScript, Swift, and Kotlin. I’m the CTO at Formidable, a
         global design, product, and engineering consultancy with a focus on
         open-source software.
       </p>
-      <div className={styles.socials}>
-        <a
-          href="https://www.github.com/carloskelly13"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div
+        className={clsx("flex flex-col md:flex-row containerSelectors text-lg")}
+      >
+        <Link
+          className="mx-4"
+          icon={
+            <RiGithubFill
+              size={socialMediaIconSize}
+              className="mr-0.5 group-hover:text-green-600 transition-colors"
+            />
+          }
+          to="https://www.github.com/carloskelly13"
         >
           GitHub
-        </a>
-        <a
-          href="https://www.instagram.com/carloskelly.13"
-          target="_blank"
-          rel="noopener noreferrer"
+        </Link>
+        <Link
+          className="mx-4"
+          icon={
+            <RiInstagramFill
+              size={socialMediaIconSize}
+              className="mr-0.5 group-hover:text-pink-600 transition-colors"
+            />
+          }
+          to="https://www.instagram.com/carloskelly.13"
         >
           Instagram
-        </a>
-        <a
-          href="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
-          target="_blank"
-          rel="noopener noreferrer"
+        </Link>
+        <Link
+          className="mx-4"
+          icon={
+            <RiLinkedinBoxFill
+              size={socialMediaIconSize}
+              className="mr-0.5 group-hover:text-blue-600 transition-colors"
+            />
+          }
+          to="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
         >
           LinkedIn
-        </a>
-        <a
-          href="https://twitter.com/carlos_paelinck"
-          target="_blank"
-          rel="noopener noreferrer"
+        </Link>
+        <Link
+          className="mx-4"
+          icon={
+            <RiTwitterFill
+              size={socialMediaIconSize}
+              className="mr-0.5 group-hover:text-indigo-500 transition-colors"
+            />
+          }
+          to="https://twitter.com/carlos_paelinck"
         >
           Twitter
-        </a>
+        </Link>
       </div>
-      <div className={styles.ossSection}>
+      <div
+        className={clsx(containerSelectors, "mx-2 flex flex-col items-center")}
+      >
         <h2>OSS Projects</h2>
-        <p>I’m a maintainer and contributor to the following OSS projects:</p>
-        <div className={styles.ossProjects}>
-          <a
-            href="https://formidable.com/open-source/spectacle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FeaturedBadge name="spectacle" />
-            Spectacle
-          </a>
-          <a
-            href="https://formidable.com/open-source/nuka-carousel"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FeaturedBadge name="nuka" />
-            Nuka Carousel
-          </a>
-          <a
-            href="https://formidable.com/open-source/react-live"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ProjectBadge
-              abbreviation="Rl"
-              description="React Live"
-              color="#f159da"
-            />
-            React Live
-          </a>
-          <a
-            href="https://github.com/formidablelabs/prism-react-renderer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ProjectBadge
-              abbreviation="Pr"
-              description="Prism React Renderer"
-              color="#5289a9"
-            />
-            Prism React Renderer
-          </a>
-        </div>
+        {ossProjectData.map(ossProject => (
+          <OssProject project={ossProject} key={ossProject.title} />
+        ))}
       </div>
     </main>
   )
