@@ -12,7 +12,6 @@ type Props = PropsWithChildren<{
 export const Name = ({ className, children }: Props) => {
   const triggerRef = useRef<HTMLDivElement>(null)
   const targetRef = useRef<HTMLDivElement>(null)
-
   const { isElementHidden } = useElementScroll({ triggerRef, targetRef })
   const handleScrollToTop = () =>
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -29,7 +28,7 @@ export const Name = ({ className, children }: Props) => {
           "text-opacity-70 text-transparent z-50 py-1",
           isElementHidden && [
             "cursor-pointer !fixed",
-            "scale-75 md:scale-[60%] top-1 md:top-0.5",
+            "scale-75 md:scale-[67%] top-1",
           ],
           styles.textShadow,
           className
@@ -37,7 +36,7 @@ export const Name = ({ className, children }: Props) => {
       >
         {children}
       </div>
-      <div className="absolute top-0 h-[40px]" ref={triggerRef} />
+      <div className="top-0 w-1 h-1" ref={triggerRef} />
       <div
         className={clsx(
           "transition-all duration-300 motion-reduce:transition-none ease-in-out",

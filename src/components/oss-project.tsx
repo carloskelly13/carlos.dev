@@ -1,15 +1,24 @@
 import { ossProjectData } from "@/components/oss-project-data"
 import { Link } from "@/components/link"
 import clsx from "clsx"
+import { motion } from "framer-motion"
 
 type Props = {
   project: (typeof ossProjectData)[number]
   className?: string
+  activeClassName?: string
+  index: number
 }
 
-export const OssProject = ({ project, className }: Props) => {
+export const OssProject = ({ project, className, index }: Props) => {
   return (
-    <div className={clsx(className, "w-full my-4")}>
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0, transition: { delay: 0.1 * index } }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.25 }}
+      className={clsx(className, "w-full my-8 first:mt-4")}
+    >
       <div className="font-emphasis text-2xl">{project.title}</div>
       <div
         className={clsx(
@@ -17,9 +26,11 @@ export const OssProject = ({ project, className }: Props) => {
         )}
       >
         <div className="mt-1 mb-2">{project.description}</div>
-        <Link to={project.gitHubUrl}>GitHub</Link>
+        <Link className="mr-1.5" to={project.gitHubUrl}>
+          GitHub
+        </Link>
         {project.docsUrl ? <Link to={project.docsUrl}>Docs</Link> : null}
       </div>
-    </div>
+    </motion.div>
   )
 }

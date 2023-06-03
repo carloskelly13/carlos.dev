@@ -18,7 +18,7 @@
 }
 
 :root {
-  --slate-800: theme('colors.slate.800');
+  --3d-text-shadow: theme('colors.slate.800');
   --yellow-800: theme('colors.yellow.800');
   --yellow-700: theme('colors.yellow.700');
   --yellow-600: theme('colors.yellow.600');
@@ -32,10 +32,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 214, 219, 220;
-    --background-rgb: 14, 19, 20;
-    --yellow: #facc15;
-    --blue: #a5b4fc;
+    --3d-text-shadow: theme('colors.slate.400');
   }
 }
 
@@ -47,12 +44,10 @@
 
 html,
 body {
-  @apply font-copy;
-}
-
-body {
+  @apply font-copy min-h-screen;
   @apply bg-gradient-to-b from-slate-300 to-white;
-  @apply min-h-screen;
+  @apply dark:from-slate-700 dark:to-slate-900;
+  @apply text-slate-900 dark:text-slate-50;
 }
 
 @media (prefers-color-scheme: dark) {

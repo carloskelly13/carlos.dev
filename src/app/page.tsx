@@ -11,6 +11,7 @@ import {
 import { Name } from "@/components/name"
 import { ossProjectData } from "@/components/oss-project-data"
 import { OssProject } from "@/components/oss-project"
+import { Tabs } from "@/components/tabs"
 
 export const metadata = {
   title: "Carlos Kelly",
@@ -27,7 +28,8 @@ export default function Home() {
       <div className={clsx("flex flex-col items-center mt-12")}>
         <Image
           className={clsx(
-            "rounded-full h-32 w-32 bg-gradient-to-t from-slate-100 to-slate-300 mb-4"
+            "rounded-full h-32 w-32 bg-gradient-to-t from-slate-100 to-slate-300 mb-4",
+            "dark:from-slate-600 dark:to-slate-700"
           )}
           width={400}
           height={400}
@@ -66,7 +68,7 @@ export default function Home() {
           icon={
             <RiGithubFill
               size={socialMediaIconSize}
-              className="mr-0.5 group-hover:text-green-600 transition-colors"
+              className="mr-0.5 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors"
             />
           }
           to="https://www.github.com/carloskelly13"
@@ -78,7 +80,7 @@ export default function Home() {
           icon={
             <RiInstagramFill
               size={socialMediaIconSize}
-              className="mr-0.5 group-hover:text-pink-600 transition-colors"
+              className="mr-0.5 group-hover:text-pink-600 dark:group-hover:text-pink-500 transition-colors"
             />
           }
           to="https://www.instagram.com/carloskelly.13"
@@ -90,7 +92,7 @@ export default function Home() {
           icon={
             <RiLinkedinBoxFill
               size={socialMediaIconSize}
-              className="mr-0.5 group-hover:text-blue-600 transition-colors"
+              className="mr-0.5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
             />
           }
           to="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
@@ -102,7 +104,7 @@ export default function Home() {
           icon={
             <RiTwitterFill
               size={socialMediaIconSize}
-              className="mr-0.5 group-hover:text-indigo-500 transition-colors"
+              className="mr-0.5 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors"
             />
           }
           to="https://twitter.com/carlos_paelinck"
@@ -113,11 +115,9 @@ export default function Home() {
       <div
         className={clsx(containerSelectors, "mx-2 flex flex-col items-center")}
       >
-        <h2>OSS Projects</h2>
-        {ossProjectData.map(ossProject => (
-          <OssProject project={ossProject} key={ossProject.title} />
-        ))}
+        <Tabs />
       </div>
+      <div className="w-full bg-slate-300 dark:bg-slate-700 h-2 mt-4" />
     </main>
   )
 }
