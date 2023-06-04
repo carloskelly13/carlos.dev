@@ -1,9 +1,9 @@
 "use client"
 
+import { clsx } from "clsx"
 import { PropsWithChildren, useRef } from "react"
-import { useElementScroll } from "@/components/useElementScroll"
-import clsx from "clsx"
 import styles from "./styles.module.css"
+import { useElementScroll } from "@/components/use-element-scroll"
 
 type Props = PropsWithChildren<{
   className?: string

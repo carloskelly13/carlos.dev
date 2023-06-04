@@ -1,5 +1,5 @@
+import { clsx } from "clsx"
 import { cloneElement, PropsWithChildren, ReactElement } from "react"
-import clsx from "clsx"
 import { CgArrowTopRight } from "react-icons/cg"
 
 type Props = PropsWithChildren<{
@@ -13,14 +13,17 @@ export const Link = ({ to, children, className, icon }: Props) => (
     href={to}
     target="_blank"
     rel="noopener noreferrer"
-    className={clsx("transition-all group", className)}
+    className={clsx(
+      "transition-all group font-emphasis text-center",
+      className
+    )}
   >
     {icon &&
       cloneElement(icon, {
         ...icon.props,
         className: clsx(icon.props.className, "inline -mt-1"),
       })}
-    <span className="group-hover:underline font-emphasis">{children}</span>
+    <span className="group-hover:underline">{children}</span>
     <CgArrowTopRight
       className={clsx(
         "inline transition-all",

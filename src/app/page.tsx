@@ -1,17 +1,15 @@
-import clsx from "clsx"
+import { clsx } from "clsx"
 import Image from "next/image"
-import { Link } from "@/components/link"
-import colors from "tailwindcss/colors"
 import {
   RiGithubFill,
   RiInstagramFill,
   RiLinkedinBoxFill,
   RiTwitterFill,
 } from "react-icons/ri"
+import colors from "tailwindcss/colors"
+import { ContentTabs } from "@/components/content-tabs"
+import { Link } from "@/components/link"
 import { Name } from "@/components/name"
-import { ossProjectData } from "@/components/oss-project-data"
-import { OssProject } from "@/components/oss-project"
-import { Tabs } from "@/components/tabs"
 
 export const metadata = {
   title: "Carlos Kelly",
@@ -24,7 +22,7 @@ const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
 
 export default function Home() {
   return (
-    <main className={clsx("flex flex-col items-center w-full")}>
+    <main className={clsx("flex flex-col items-center w-full min-h-screen")}>
       <div className={clsx("flex flex-col items-center mt-12 relative")}>
         <Image
           className={clsx(
@@ -41,11 +39,11 @@ export default function Home() {
       <h3
         className={clsx(
           containerSelectors,
-          "font-emphasis text-2xl md:text-3xl mt-4 mb-2 text-center"
+          "font-header text-xl md:text-2xl mt-4 mb-2 text-center"
         )}
       >
         Software Engineer &amp; CTO at&nbsp;
-        <Link className="inline" to="https://www.formidable.com">
+        <Link className="inline !font-header" to="https://www.formidable.com">
           Formidable
         </Link>
       </h3>
@@ -61,7 +59,11 @@ export default function Home() {
         open-source software.
       </p>
       <div
-        className={clsx("flex flex-col md:flex-row containerSelectors text-lg")}
+        className={clsx(
+          containerSelectors,
+          "grid grid-cols-2 md:flex flex-row gap-y-4",
+          "items-center justify-center text-lg"
+        )}
       >
         <Link
           className="mx-4"
@@ -115,9 +117,15 @@ export default function Home() {
       <div
         className={clsx(containerSelectors, "mx-2 flex flex-col items-center")}
       >
-        <Tabs />
+        <ContentTabs />
       </div>
-      <div className="w-full bg-slate-300 dark:bg-slate-700 h-2 mt-4" />
+      <div
+        className={clsx(
+          "hidden md:block",
+          "fixed bottom-0 left-0 right-0 z-10",
+          "bg-slate-300 dark:bg-slate-700 h-2 mt-4"
+        )}
+      />
     </main>
   )
 }
