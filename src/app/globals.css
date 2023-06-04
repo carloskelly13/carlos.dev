@@ -1,17 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SharpGrotesk-Book";
+  src: url('/fonts/book.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SharpGrotesk-Bold";
+  src: url('/fonts/bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SharpGrotesk-Medium-Narrow";
+  src: url('/fonts/medium-narrow.woff2') format('woff2');
+  font-display: swap;
+}
+
 :root {
-  --foreground-rgb: 14, 19, 20;
-  --backgroundrgb: 214, 219, 220;
-  --yellow: #b38600;
-  --blue: #1e40af;
-  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --3d-text-shadow: theme('colors.slate.800');
+  --yellow-800: theme('colors.yellow.800');
+  --yellow-700: theme('colors.yellow.700');
+  --yellow-600: theme('colors.yellow.600');
+  --yellow-500: theme('colors.yellow.500');
+  --yellow-400: theme('colors.yellow.400');
+  --yellow-300: theme('colors.yellow.300');
+  --yellow-200: theme('colors.yellow.200');
+  --yellow-100: theme('colors.yellow.100');
+  --yellow-50: theme('colors.yellow.50');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 214, 219, 220;
-    --background-rgb: 14, 19, 20;
-    --yellow: #facc15;
-    --blue: #a5b4fc;
+    --3d-text-shadow: theme('colors.slate.400');
   }
 }
 
@@ -23,25 +47,10 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: var(--system-ui);
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--background-rgb);
-}
-
-a {
-  position: relative;
-  top: 0;
-  color: var(--blue);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  @apply font-copy min-h-screen;
+  @apply bg-gradient-to-b from-slate-300 to-white;
+  @apply dark:from-slate-700 dark:to-slate-900;
+  @apply text-slate-900 dark:text-slate-50;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,36 @@
+.textShadow {
+  text-shadow:
+      1px 1px 0 var(--yellow-300),
+      1px 2px 0 var(--yellow-600),
+      1px 3px 0 var(--yellow-600),
+      1px 4px 0 var(--yellow-700),
+      0 1px 8px hsla(0, 0%, 0%, 0.33),
+      2px 5px 3px hsla(0, 0%, 0%, 0.5),
+      0 3px 60px var(--3d-text-shadow);
+}
+
+.tab::before {
+  @apply dark:bg-slate-600 bg-slate-700 h-1 -z-10 w-full;
+  @apply absolute bottom-0 left-0 rounded-full;
+  content: "";
+  transform: scaleX(0);
+  transition: transform 400ms ease-out;
+}
+
+@media (prefers-reduced-motion) {
+  .tab::before {
+    transition: none;
+  }
+}
+
+.tab:nth-of-type(1)::before {
+  transform-origin: right;
+}
+
+.tab:nth-of-type(2)::before {
+  transform-origin: left;
+}
+
+.tab.selected::before {
+  transform: scaleX(1);
+}
