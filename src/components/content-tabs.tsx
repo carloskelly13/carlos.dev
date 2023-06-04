@@ -35,6 +35,7 @@ export const ContentTabs = () => {
         )}
       >
         <button
+          aria-pressed={activeTab === "open-source"}
           className={clsx(
             tabClassName,
             activeTab === "open-source" && activeTabClassName
@@ -44,6 +45,7 @@ export const ContentTabs = () => {
           Open Source
         </button>
         <button
+          aria-pressed={activeTab === "work-history"}
           className={clsx(
             tabClassName,
             activeTab === "work-history" && activeTabClassName

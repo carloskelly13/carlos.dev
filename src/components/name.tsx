@@ -13,15 +13,11 @@ export const Name = ({ className, children }: Props) => {
   const triggerRef = useRef<HTMLDivElement>(null)
   const targetRef = useRef<HTMLDivElement>(null)
   const { isElementHidden } = useElementScroll({ triggerRef, targetRef })
-  const handleScrollToTop = () =>
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
 
   return (
     <>
       <div
         ref={targetRef}
-        role={isElementHidden ? "button" : "heading"}
-        onClick={isElementHidden ? handleScrollToTop : undefined}
         className={clsx(
           "transition-all duration-400 motion-reduce:transition-none ease-linear",
           "text-4xl md:text-5xl text-center tracking-tight font-header",

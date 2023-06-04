@@ -5,16 +5,19 @@
 @font-face {
   font-family: "SharpGrotesk-Book";
   src: url('/fonts/book.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SharpGrotesk-Bold";
   src: url('/fonts/bold.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SharpGrotesk-Medium-Narrow";
   src: url('/fonts/medium-narrow.woff2') format('woff2');
+  font-display: swap;
 }
 
 :root {
