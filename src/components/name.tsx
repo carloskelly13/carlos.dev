@@ -36,7 +36,8 @@ export const Name = ({ className, children }: Props) => {
       >
         {children}
       </div>
-      <div className="top-0 w-1 h-1" ref={triggerRef} />
+      <div className={clsx(isElementHidden && "w-1 h-[60px]")} />
+      <div className="absolute top-0 h-[40px]" ref={triggerRef} />
       <div
         className={clsx(
           "transition-all duration-300 motion-reduce:transition-none ease-in-out",

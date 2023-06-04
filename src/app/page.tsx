@@ -25,7 +25,7 @@ const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
 export default function Home() {
   return (
     <main className={clsx("flex flex-col items-center w-full")}>
-      <div className={clsx("flex flex-col items-center mt-12")}>
+      <div className={clsx("flex flex-col items-center mt-12 relative")}>
         <Image
           className={clsx(
             "rounded-full h-32 w-32 bg-gradient-to-t from-slate-100 to-slate-300 mb-4",

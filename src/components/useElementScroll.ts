@@ -13,7 +13,7 @@ export const useElementScroll = (options: Options) => {
     const parentHeight =
       options.targetRef.current?.parentElement?.getBoundingClientRect()
         .height || 100
-    const hidden = offset <= -(parentHeight / 2) - 80
+    const hidden = offset <= -(parentHeight / 2)
     setIsElementHidden(hidden)
   }, [])
   useEffect(() => {
