@@ -1,5 +1,6 @@
 import { clsx } from "clsx"
 import Image from "next/image"
+import { CgArrowRight } from "react-icons/cg"
 import {
   RiGithubFill,
   RiInstagramFill,
@@ -7,9 +8,10 @@ import {
   RiTwitterFill,
 } from "react-icons/ri"
 import colors from "tailwindcss/colors"
-import { ContentTabs } from "@/components/content-tabs"
 import { Link } from "@/components/link"
 import { Name } from "@/components/name"
+import { ossProjectData } from "@/components/oss-project-data"
+import { workHistoryData } from "@/components/work-history-data"
 
 export const metadata = {
   title: "Carlos Kelly",
@@ -19,11 +21,21 @@ export const metadata = {
 
 const socialMediaIconSize = 28
 const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
+const contentSectionHeaderSelectors = clsx(
+  "w-full text-left mt-12 font-header pb-2",
+  "text-2xl text-slate-800 dark:text-slate-400",
+  "border-b border-dashed dark:border-slate-600 border-slate-700"
+)
 
 export default function Home() {
   return (
     <main className={clsx("flex flex-col items-center w-full min-h-screen")}>
-      <div className={clsx("flex flex-col items-center mt-12 relative")}>
+      <div
+        className={clsx(
+          containerSelectors,
+          "flex flex-col items-start justify-center mt-12 relative"
+        )}
+      >
         <Image
           className={clsx(
             "rounded-full h-32 w-32 bg-gradient-to-t from-slate-100 to-slate-300 mb-4",
@@ -39,7 +51,7 @@ export default function Home() {
       <h3
         className={clsx(
           containerSelectors,
-          "font-header text-xl md:text-2xl mt-4 mb-2 text-center"
+          "font-header text-xl md:text-2xl mt-4 mb-2 text-left"
         )}
       >
         Software Engineer &amp; CTO at&nbsp;
@@ -50,7 +62,7 @@ export default function Home() {
       <p
         className={clsx(
           containerSelectors,
-          "text-lg md:text-xl text-center my-4 !leading-loose"
+          "text-lg md:text-xl text-left my-4 !leading-loose"
         )}
       >
         I’m a software engineer building web and native apps with React,
@@ -62,11 +74,11 @@ export default function Home() {
         className={clsx(
           containerSelectors,
           "grid grid-cols-2 md:flex flex-row gap-y-4",
-          "items-center justify-center text-lg"
+          "items-center justify-start text-lg"
         )}
       >
         <Link
-          className="mx-4"
+          className="md:mr-4 !text-left md:text-center"
           icon={
             <RiGithubFill
               size={socialMediaIconSize}
@@ -78,7 +90,7 @@ export default function Home() {
           GitHub
         </Link>
         <Link
-          className="mx-4"
+          className="md:mx-4 !text-left md:text-center"
           icon={
             <RiInstagramFill
               size={socialMediaIconSize}
@@ -90,7 +102,7 @@ export default function Home() {
           Instagram
         </Link>
         <Link
-          className="mx-4"
+          className="md:mx-4 !text-left md:text-center"
           icon={
             <RiLinkedinBoxFill
               size={socialMediaIconSize}
@@ -102,7 +114,7 @@ export default function Home() {
           LinkedIn
         </Link>
         <Link
-          className="mx-4"
+          className="md:mx-4 !text-left md:text-center"
           icon={
             <RiTwitterFill
               size={socialMediaIconSize}
@@ -117,7 +129,45 @@ export default function Home() {
       <div
         className={clsx(containerSelectors, "mx-2 flex flex-col items-center")}
       >
-        <ContentTabs />
+        <h2 className={contentSectionHeaderSelectors}>Open Source</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 my-8">
+          {ossProjectData.map(ossProject => (
+            <div className="w-full" key={ossProject.title}>
+              <div className="text-xl">{ossProject.title}</div>
+              <div>
+                <div className="mt-1 mb-2">{ossProject.description}</div>
+                <Link className="mr-1.5" to={ossProject.gitHubUrl}>
+                  GitHub
+                </Link>
+                {ossProject.docsUrl ? (
+                  <Link to={ossProject.docsUrl}>Docs</Link>
+                ) : null}
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2 className={contentSectionHeaderSelectors}>Work History</h2>
+        {workHistoryData.map(workHistory => (
+          <div
+            className="w-full my-6 first:mt-4 last:mb-12"
+            key={workHistory.company}
+          >
+            <div className="text-xl">{workHistory.company}</div>
+            <div className="mt-1 mb-2 text-md">
+              {workHistory.titles.map(({ name, startDate, endDate }) => (
+                <div key={`${name}-${startDate}`}>
+                  <span className="mr-2">{name}:</span>
+                  {startDate}
+                  <CgArrowRight className="mx-0.5 inline" />
+                  {endDate}
+                </div>
+              ))}
+            </div>
+            <div className={clsx()}>
+              <div className="mt-1 mb-2">{workHistory.description}</div>
+            </div>
+          </div>
+        ))}
       </div>
       <div
         className={clsx(
