@@ -4,9 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        copy: "SharpGrotesk-Book, serif",
-        emphasis: "SharpGrotesk-Medium-Narrow, serif",
-        header: "SharpGrotesk-Bold, serif",
+        copy: "Tasa Orbiter VF, serif",
       },
     },
   },

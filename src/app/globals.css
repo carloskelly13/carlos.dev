@@ -3,21 +3,29 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "SharpGrotesk-Book";
-  src: url('/fonts/book.woff2') format('woff2');
+  font-family: "Tasa Orbiter VF";
+  src: url('/fonts/tasa-vf.woff2') format('woff2');
   font-display: swap;
 }
 
-@font-face {
-  font-family: "SharpGrotesk-Bold";
-  src: url('/fonts/bold.woff2') format('woff2');
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "SharpGrotesk-Medium-Narrow";
-  src: url('/fonts/medium-narrow.woff2') format('woff2');
-  font-display: swap;
+@layer utilities {
+  .font-medium {
+    font-weight: normal;
+    font-variation-settings: 'wght' 533, 'opsz' 24;
+  }
+  .font-semibold {
+    font-weight: normal;
+    font-variation-settings: 'wght' 600, 'opsz' 32;
+  }
+  .font-bold {
+    font-weight: normal;
+    font-variation-settings: 'wght' 700, 'opsz' 60;
+  }
+  .font-black {
+    font-weight: normal;
+    font-variation-settings: 'wght' 750, 'opsz' 60;
+  }
 }
 
 :root {

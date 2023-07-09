@@ -22,7 +22,7 @@ export const metadata = {
 const socialMediaIconSize = 28
 const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
 const contentSectionHeaderSelectors = clsx(
-  "w-full text-left mt-12 font-header pb-2",
+  "w-full text-left mt-12 font-copy pb-2 font-bold",
   "text-2xl text-slate-800 dark:text-slate-400",
   "border-b border-dashed dark:border-slate-600 border-slate-700"
 )
@@ -51,11 +51,11 @@ export default function Home() {
       <h3
         className={clsx(
           containerSelectors,
-          "font-header text-xl md:text-2xl mt-4 mb-2 text-left"
+          "text-xl md:text-2xl mt-4 mb-2 text-left font-medium"
         )}
       >
         Software Engineer &amp; CTO at&nbsp;
-        <Link className="inline !font-header" to="https://www.formidable.com">
+        <Link className="inline" to="https://www.formidable.com">
           Formidable
         </Link>
       </h3>
@@ -133,7 +133,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 my-8">
           {ossProjectData.map(ossProject => (
             <div className="w-full" key={ossProject.title}>
-              <div className="text-xl">{ossProject.title}</div>
+              <div className="text-xl font-semibold">{ossProject.title}</div>
               <div>
                 <div className="mt-1 mb-2">{ossProject.description}</div>
                 <Link className="mr-1.5" to={ossProject.gitHubUrl}>
@@ -152,11 +152,11 @@ export default function Home() {
             className="w-full my-6 first:mt-4 last:mb-12"
             key={workHistory.company}
           >
-            <div className="text-xl">{workHistory.company}</div>
+            <div className="text-xl font-semibold">{workHistory.company}</div>
             <div className="mt-1 mb-2 text-md">
               {workHistory.titles.map(({ name, startDate, endDate }) => (
                 <div key={`${name}-${startDate}`}>
-                  <span className="mr-2">{name}:</span>
+                  <span className="mr-2 font-medium">{name}:</span>
                   {startDate}
                   <CgArrowRight className="mx-0.5 inline" />
                   {endDate}

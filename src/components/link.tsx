@@ -14,7 +14,7 @@ export const Link = ({ to, children, className, icon }: Props) => (
     target="_blank"
     rel="noopener noreferrer"
     className={clsx(
-      "transition-all group font-emphasis text-center",
+      "transition-all group text-center font-semibold",
       className
     )}
   >
