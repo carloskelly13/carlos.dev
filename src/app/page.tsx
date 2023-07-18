@@ -43,7 +43,7 @@ export default function Home() {
           )}
           width={400}
           height={400}
-          src="https://res.cloudinary.com/dqlrwmfsu/image/upload/c_scale,q_85,w_400/v1685371891/carlos.dev/carlos-transparent_xlulal.png"
+          src="/carlos.jpg"
           alt="Carlos Kelly Profile Image"
         />
         <Name>Carlos Kelly</Name>
