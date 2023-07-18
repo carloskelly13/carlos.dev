@@ -51,11 +51,11 @@ export default function Home() {
       <h3
         className={clsx(
           containerSelectors,
-          "text-xl md:text-2xl mt-4 mb-2 text-left font-medium"
+          "text-xl md:text-2xl mt-4 mb-2 text-left font-bold"
         )}
       >
         Software Engineer &amp; CTO at&nbsp;
-        <Link className="inline" to="https://www.formidable.com">
+        <Link className="inline font-black" to="https://www.formidable.com">
           Formidable
         </Link>
       </h3>
