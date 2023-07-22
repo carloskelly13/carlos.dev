@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "CraftworkGrotesk";
+  src: url('/fonts/CraftworkGrotesk-Heavy.woff2') format('woff2');
+  font-display: swap;
+}
+
+
+@font-face {
   font-family: "Tasa Orbiter VF";
   src: url('/fonts/tasa-vf.woff2') format('woff2');
   font-display: swap;
@@ -23,8 +30,8 @@
     font-variation-settings: 'wght' 700, 'opsz' 60;
   }
   .font-black {
-    font-weight: normal;
-    font-variation-settings: 'wght' 750, 'opsz' 60;
+    font-family: 'CraftworkGrotesk', sans-serif;
+    font-weight: bolder;
   }
 }
 

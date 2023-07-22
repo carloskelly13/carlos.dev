@@ -20,11 +20,11 @@ export const Name = ({ className, children }: Props) => {
         ref={targetRef}
         className={clsx(
           "transition-all duration-400 motion-reduce:transition-none ease-linear",
-          "text-4xl md:text-5xl text-center tracking-tight",
+          "text-3xl md:text-4xl text-center tracking-tight",
           "text-opacity-70 text-transparent z-50 py-1 font-black",
           isElementHidden && [
             "cursor-pointer !fixed",
-            "scale-75 md:scale-[67%] top-1 -ml-6 md:-ml-11",
+            "scale-75 md:scale-[67%] top-1 -ml-6 md:-ml-10",
           ],
           styles.textShadow,
           className
