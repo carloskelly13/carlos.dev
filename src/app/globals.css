@@ -3,30 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "CraftworkGrotesk";
-  src: url('/fonts/CraftworkGrotesk-Medium.woff2') format('woff2');
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "CraftworkGrotesk";
-  src: url('/fonts/CraftworkGrotesk-Heavy.woff2') format('woff2');
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "CraftworkGrotesk";
-  src: url('/fonts/CraftworkGrotesk-Bold.woff2') format('woff2');
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "CraftworkGrotesk";
-  src: url('/fonts/CraftworkGrotesk-SemiBold.woff2') format('woff2');
-  font-weight: 500;
+  font-family: "Tasa Orbiter VF";
+  src: url('/fonts/tasa-vf.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -37,13 +15,16 @@
     font-variation-settings: 'wght' 533, 'opsz' 24;
   }
   .font-semibold {
-    font-weight: 500
+    font-weight: normal;
+    font-variation-settings: 'wght' 600, 'opsz' 32;
   }
   .font-bold {
-    font-weight: 600;
+    font-weight: normal;
+    font-variation-settings: 'wght' 700, 'opsz' 60;
   }
   .font-black {
-    font-weight: 800;
+    font-weight: normal;
+    font-variation-settings: 'wght' 750, 'opsz' 60;
   }
 }
 

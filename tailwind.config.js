@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        copy: "CraftworkGrotesk, serif",
+        copy: "Tasa Orbiter VF, serif",
       },
     },
   },

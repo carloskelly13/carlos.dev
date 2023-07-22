@@ -24,7 +24,7 @@ export const Name = ({ className, children }: Props) => {
           "text-opacity-70 text-transparent z-50 py-1 font-black",
           isElementHidden && [
             "cursor-pointer !fixed",
-            "scale-75 md:scale-[67%] top-1 -ml-7 md:-ml-12",
+            "scale-75 md:scale-[67%] top-1 -ml-6 md:-ml-11",
           ],
           styles.textShadow,
           className
