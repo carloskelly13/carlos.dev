@@ -1,6 +1,8 @@
 import { clsx } from "clsx"
 import Image from "next/image"
 import { CgArrowRight } from "react-icons/cg"
+import { PiFilePdfFill } from "react-icons/pi"
+
 import {
   RiGithubFill,
   RiInstagramFill,
@@ -8,6 +10,7 @@ import {
   RiTwitterFill,
 } from "react-icons/ri"
 import colors from "tailwindcss/colors"
+import { blogData } from "@/components/blog-data"
 import { Link } from "@/components/link"
 import { Name } from "@/components/name"
 import { ossProjectData } from "@/components/oss-project-data"
@@ -24,7 +27,8 @@ const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
 const contentSectionHeaderSelectors = clsx(
   "w-full text-left mt-12 font-copy pb-2 font-bold",
   "text-2xl text-slate-800 dark:text-slate-400",
-  "border-b border-dashed dark:border-slate-600 border-slate-700"
+  "border-b border-dashed dark:border-slate-600 border-slate-700",
+  "flex flex-row justify-between items-center"
 )
 
 export default function Home() {
@@ -146,7 +150,38 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <h2 className={contentSectionHeaderSelectors}>Work History</h2>
+        <h2 className={contentSectionHeaderSelectors}>
+          <span>Blog Posts</span>
+          <Link
+            className="text-sm md:text-lg"
+            to="https://formidable.com/about/carlos-kelly/"
+          >
+            See all content
+          </Link>
+        </h2>
+        {blogData.map(blogPost => (
+          <div
+            className="w-full my-6 first:mt-4 last:mb-12"
+            key={blogPost.title}
+          >
+            <Link className="text-xl font-semibold" to={blogPost.url}>
+              {blogPost.title}
+            </Link>
+            <div className="my-2">{blogPost.description}</div>
+            {blogPost.coauthor && (
+              <div className="text-[0.9rem]">
+                Co-authored by {blogPost.coauthor}
+              </div>
+            )}
+          </div>
+        ))}
+        <h2 className={contentSectionHeaderSelectors}>
+          <span>Work History</span>
+          <Link className="text-sm md:text-lg" to="/carlos_kelly_resume.pdf">
+            View full resume
+            <PiFilePdfFill className="inline ml-1 mb-0.5" />
+          </Link>
+        </h2>
         {workHistoryData.map(workHistory => (
           <div
             className="w-full my-6 first:mt-4 last:mb-12"
