@@ -125,7 +125,7 @@ export default function Home() {
               className="mr-0.5 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors"
             />
           }
-          to="https://twitter.com/carlos_paelinck"
+          to="https://twitter.com/carloskelly_13"
         >
           Twitter
         </Link>
