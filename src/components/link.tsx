@@ -6,12 +6,19 @@ type Props = PropsWithChildren<{
   to: string
   className?: string
   icon?: ReactElement
+  target?: string
 }>
 
-export const Link = ({ to, children, className, icon }: Props) => (
+export const Link = ({
+  to,
+  children,
+  className,
+  icon,
+  target = "_blank",
+}: Props) => (
   <a
     href={to}
-    target="_blank"
+    target={target}
     rel="noopener noreferrer"
     className={clsx(
       "transition-all group text-center font-semibold",
