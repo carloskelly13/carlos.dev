@@ -1,0 +1,98 @@
+---
+import { getGitHubRepos } from "./get-github-repos"
+import Link from "../components/Link.astro"
+
+const containerSelectors = "w-11/12 md:w-3/4 lg:w-3/5"
+const repos = await getGitHubRepos()
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Carlos Kelly</title>
+  </head>
+  <body>
+    <main class="flex flex-col items-center w-full min-h-screen">
+      <section
+        class:list={[
+          containerSelectors,
+          "flex flex-col items-start justify-center mt-12 relative",
+        ]}
+      >
+        <img
+          class="rounded-full h-32 w-32"
+          src="/carlos.jpg"
+          alt="Carlos Kelly Profile Image"
+        />
+        <h1 class="text-3xl md:text-4xl text-center tracking-tight">
+          Carlos Kelly
+        </h1>
+        <h2 class="text-xl md:text-2xl my-2 text-left font-medium">
+          Software Engineer & CTO at Formidable
+        </h2>
+        <p class="text-lg md:text-xl text-left my-4 !leading-loose">
+          I’m a software engineer building web and native apps with React,
+          GraphQL, TypeScript, Swift, and Kotlin. I’m the CTO at Formidable, a
+          global design, product, and engineering consultancy with a focus on
+          open-source software.
+        </p>
+      </section>
+      <section
+        class:list={[
+          containerSelectors,
+          "grid grid-cols-2 md:flex flex-row gap-y-4",
+          "items-center justify-start text-lg",
+        ]}
+      >
+        <Link
+          class:list={["md:mr-4 !text-left md:text-center"]}
+          href="https://www.github.com/carloskelly13"
+          target="_blank"
+        >
+          GitHub
+        </Link>
+        <Link
+          class:list={["md:mx-4 !text-left md:text-center"]}
+          href="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
+          target="_blank"
+        >
+          LinkedIn
+        </Link>
+        <Link
+          class:list={["md:mx-4 !text-left md:text-center"]}
+          href="https://www.instagram.com/carloskelly.13"
+          target="_blank"
+        >
+          Instagram
+        </Link>
+        <Link
+          class:list={["md:mx-4 !text-left md:text-center"]}
+          href="/carlos_kelly_resume.pdf"
+          target="_blank"
+        >
+          Resume
+        </Link>
+      </section>
+      <section
+        class:list={[containerSelectors, "mx-2 flex flex-col items-center"]}
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 my-8">
+          {
+            repos.map(repo => (
+              <div class="w-full">
+                <div class="text-xl font-semibold">{repo.name}</div>
+                <div class="mt-1 mb-2">{repo.description}</div>
+                <Link class:list={["mr-1.5"]} href={repo.url} target="_blank">
+                  GitHub
+                </Link>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

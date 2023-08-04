@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon"
+
+type Props = {
+  href: string
+  target?: string
+  "class:list"?: string[]
+}
+
+const { href, target = "" } = Astro.props
+const classList = Astro.props["class:list"]
+---
+
+<a
+  href={href}
+  target={target}
+  rel="noopener noreferrer"
+  class:list={["transition-all group text-center font-semibold", classList]}
+>
+  <slot name="icon" />
+  <span class="group-hover:underline"><slot /></span>
+  <Icon
+    name="mdi:arrow-top-right"
+    class="inline transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -mt-0.5 h-4"
+  />
+</a>
