@@ -1,26 +1,18 @@
 ---
 import { Icon } from "astro-icon"
-import { containerSelectors } from "./GlobalStyles.astro"
+
+const iconSelectors =
+  "h-6 inline group-hover:scale-110 transition-all group-hover:text-yellow-700 dark:group-hover:text-yellow-400"
 ---
 
-<section
-  class:list={[
-    containerSelectors,
-    "flex flex-row gap-6",
-    "items-center justify-start text-xl",
-  ]}
->
+<section class="flex flex-row gap-6">
   <a
     title="GitHub"
     class="group"
     href="https://www.github.com/carloskelly13"
     target="_blank"
   >
-    <Icon
-      name="fa-brands:github"
-      slot="icon"
-      class="h-6 inline group-hover:scale-110 transition-transform"
-    />
+    <Icon name="fa-brands:github" slot="icon" class:list={[iconSelectors]} />
   </a>
   <a
     title="LinkedIn"
@@ -28,11 +20,7 @@ import { containerSelectors } from "./GlobalStyles.astro"
     href="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
     target="_blank"
   >
-    <Icon
-      name="uiw:linkedin"
-      slot="icon"
-      class="h-6 inline group-hover:scale-110 transition-transform"
-    />
+    <Icon name="uiw:linkedin" slot="icon" class:list={[iconSelectors]} />
   </a>
   <a
     title="Instagram"
@@ -40,11 +28,7 @@ import { containerSelectors } from "./GlobalStyles.astro"
     href="https://www.instagram.com/carloskelly.13"
     target="_blank"
   >
-    <Icon
-      name="ri:instagram-fill"
-      slot="icon"
-      class="h-6 inline group-hover:scale-110 transition-transform"
-    />
+    <Icon name="ri:instagram-fill" slot="icon" class:list={[iconSelectors]} />
   </a>
   <a
     title="X"
@@ -58,7 +42,7 @@ import { containerSelectors } from "./GlobalStyles.astro"
       height="24"
       viewBox="0 0 24 24"
       slot="icon"
-      class="h-6 inline group-hover:scale-110 transition-transform"
+      class:list={[iconSelectors]}
     >
       <path
         fill="none"

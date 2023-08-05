@@ -1,7 +1,7 @@
 ---
 export const containerSelectors = "w-11/12 md:w-3/5 lg:w-2/5"
 export const headerSelectors =
-  "text-md md:text-xl font-bold text-yellow-700 tracking-tight"
+  "text-md md:text-xl font-bold tracking-tight underline decoration-wavy decoration-yellow-600 dark:decoration-yellow-400 underline-offset-2"
 ---
 
 <style is:global>
@@ -23,6 +23,8 @@ export const headerSelectors =
 
   html,
   body {
+    @apply bg-white dark:bg-stone-800;
+    @apply text-stone-950 dark:text-stone-300;
     font-family: "sans", sans-serif;
   }
 </style>

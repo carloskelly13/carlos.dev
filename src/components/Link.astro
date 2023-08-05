@@ -18,11 +18,13 @@ const classList = Astro.props["class:list"]
   class:list={["transition-all group whitespace-nowrap", classList]}
 >
   <slot name="icon" />
-  <span class="font-semibold group-hover:underline">
+  <span
+    class="font-semibold group-hover:text-yellow-700 dark:group-hover:text-yellow-400"
+  >
     <slot />
   </span>
   <Icon
     name="mdi:arrow-top-right"
-    class="inline transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -mt-0.5 h-4"
+    class="inline transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -mt-0.5 h-4 group-hover:text-yellow-700 dark:group-hover:text-yellow-400"
   /><slot name="post-arrow" />
 </a>
