@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon"
+import { containerSelectors, headerSelectors } from "./GlobalStyles.astro"
+import { workHistory } from "../data/work-history"
+---
+
+<section class:list={[containerSelectors, "mt-10 mb-20"]}>
+  <h2 class:list={[headerSelectors, "mb-6"]}>Work History</h2>
+  <div class="flex flex-col gap-6">
+    {
+      workHistory.map(item => (
+        <div class="grid md:grid-cols-4 gap-1 md:gap-6">
+          <div class="col-span-1 text-sm">
+            {item.startTime}{" "}
+            <Icon
+              name="ph:arrow-right-bold"
+              class="inline h-4 -mt-0.5 text-yellow-700 dark:text-yellow-400"
+            />
+            {item.endTime}
+          </div>
+          <div class="col-span-3">
+            <h3 class="font-bold">{item.company}</h3>
+            <h4 class="font-bold text-sm">{item.title}</h4>
+            <p class="text-sm mt-1 leading-6 break-keep">{item.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

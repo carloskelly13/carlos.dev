@@ -1,0 +1,23 @@
+---
+import { getGitHubRepos } from "../data/get-github-repos"
+import { containerSelectors, headerSelectors } from "./GlobalStyles.astro"
+import Link from "./Link.astro"
+
+const repos = await getGitHubRepos()
+---
+
+<section class:list={[containerSelectors, "mt-10"]}>
+  <h2 class:list={[headerSelectors, "mb-6"]}>Open Source</h2>
+  <div class="flex flex-col gap-6">
+    {
+      repos.map(repo => (
+        <div class="w-full">
+          <Link href={repo.url} target="_blank">
+            {repo.name}
+          </Link>
+          <div class="mb-2 text-sm">{repo.description}</div>
+        </div>
+      ))
+    }
+  </div>
+</section>

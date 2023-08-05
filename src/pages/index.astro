@@ -1,0 +1,69 @@
+---
+import Link from "../components/Link.astro"
+import GlobalStyles, {
+  containerSelectors,
+} from "../components/GlobalStyles.astro"
+import OpenSource from "../components/OpenSource.astro"
+import WorkHistory from "../components/WorkHistory.astro"
+import TechStack from "../components/TechStack.astro"
+import Links from "../components/Links.astro"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#facc15" />
+    <meta name="description" content="Personal webpage for Carlos Kelly." />
+    <GlobalStyles />
+    <title>Carlos Kelly</title>
+  </head>
+  <body>
+    <main class="flex flex-col items-center w-full min-h-screen">
+      <section
+        class:list={[
+          containerSelectors,
+          "flex flex-col items-start justify-center relative",
+        ]}
+      >
+        <div class="flex flex-row items-center gap-4 md:gap-6 mt-12 md:mt-20">
+          <img
+            class="rounded-full h-24 w-24 md:h-28 md:w-28"
+            src="/carlos.jpg"
+            alt="Carlos Kelly Profile Image"
+          />
+          <div class="flex flex-col gap-2">
+            <h1
+              class:list={[
+                "text-3xl md:text-4xl tracking-tighter font-bold -ml-0.5 text-transparent",
+                "bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-700",
+                "bg-clip-text bg-gradient-to-r dark:from-yellow-400 dark:to-yellow-500",
+              ]}
+            >
+              Carlos Kelly
+            </h1>
+            <Links />
+          </div>
+        </div>
+        <p class="text-lg md:text-xl text-left mt-10 mb-4 !leading-relaxed">
+          I’m a software engineer building web and native apps. I enjoy both
+          leading product engineering teams and being hands-on and building
+          software. I’m the CTO at
+
+          <Link href="https://formidable.com" target="_blank">
+            Formidable<span slot="post-arrow">,</span>
+          </Link>
+           a global design, product, and engineering consultancy with a focus on
+          open-source software.
+        </p>
+      </section>
+
+      <TechStack />
+      <OpenSource />
+      <WorkHistory />
+    </main>
+  </body>
+</html>

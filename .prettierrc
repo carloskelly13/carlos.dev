@@ -1,6 +1,6 @@
 {
   "semi": false,
   "arrowParens": "avoid",
-  "xmlWhitespaceSensitivity": "ignore",
+  "htmlWhitespaceSensitivity": "ignore",
   "proseWrap": "always"
 }
