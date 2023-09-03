@@ -11,10 +11,10 @@ import { workHistory } from "../data/work-history"
       workHistory.map(item => (
         <div class="grid md:grid-cols-4 gap-1 md:gap-6">
           <div class="col-span-1 text-sm">
-            {item.startTime}{" "}
+            {item.startTime}
             <Icon
               name="ph:arrow-right-bold"
-              class="inline h-4 -mt-0.5 text-yellow-700 dark:text-yellow-400"
+              class="inline h-4 -mt-0.5 text-yellow-700 dark:text-yellow-400 mx-1"
             />
             {item.endTime}
           </div>
