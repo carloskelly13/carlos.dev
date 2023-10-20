@@ -8,17 +8,9 @@ type WorkHistoryItem = {
 
 export const workHistory: WorkHistoryItem[] = [
   {
-    startTime: "2023",
-    endTime: "present",
-    company: "NearForm",
-    title: "Head of Delivery, Staff Software Engineer",
-    description:
-      "I oversee the product, design, and engineering delivery teams for one of the American business units at NearForm. As a software engineer, I contribute and maintain our front-end focused open source such as Spectacle, Nuka, Victory Native, and React Live.",
-  },
-  {
     startTime: "2022",
-    endTime: "2023",
-    company: "Formidable",
+    endTime: "present",
+    company: "Formidable, a NearForm company",
     title: "CTO",
     description:
       "I head up the engineering delivery organization and manage the engineering leadership team. Formidable is a global design, product, and engineering agency with a team of over 80 employees servicing clients such as Puma, Starbucks, Walmart, The Atlantic, and TechStyle. I helped lead the company through a successful acquisition by NearForm in 2023.",
