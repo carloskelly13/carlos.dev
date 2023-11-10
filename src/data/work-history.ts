@@ -11,9 +11,9 @@ export const workHistory: WorkHistoryItem[] = [
     startTime: "2022",
     endTime: "present",
     company: "Formidable, a NearForm company",
-    title: "CTO",
+    title: "CTO & Staff Software Engineer",
     description:
-      "I head up the engineering delivery organization and manage the engineering leadership team. Formidable is a global design, product, and engineering agency with a team of over 80 employees servicing clients such as Puma, Starbucks, Walmart, The Atlantic, and TechStyle. I helped lead the company through a successful acquisition by NearForm in 2023.",
+      "I head up the engineering, design, and product delivery organization and manage the engineering leadership team. Formidable is a global design, product, and engineering agency with a team of over 80 employees servicing clients such as Puma, Starbucks, Walmart, The Atlantic, and TechStyle. I helped lead the company through a successful acquisition by NearForm in 2023.",
   },
   {
     startTime: "2020",
