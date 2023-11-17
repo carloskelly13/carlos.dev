@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions"
+import { Picture } from "astro:assets"
 import Link from "../components/Link.astro"
 import GlobalStyles, {
   containerSelectors,
@@ -9,6 +9,7 @@ import WorkHistory from "../components/WorkHistory.astro"
 import TechStack from "../components/TechStack.astro"
 import Links from "../components/Links.astro"
 import CommonHead from "../components/CommonHead.astro"
+import carlosImg from "../assets/carlos.png"
 ---
 
 <html lang="en">
@@ -25,11 +26,13 @@ import CommonHead from "../components/CommonHead.astro"
         ]}
       >
         <div class="flex flex-row items-center gap-4 md:gap-6 mt-12 md:mt-20">
-          <img
-            class="rounded-full h-24 w-24 md:h-28 md:w-28"
-            src="/carlos_kelly_s.webp"
-            alt="Carlos Kelly Profile Image"
-          />
+          <div class="rounded-full h-24 w-24 md:h-28 md:w-28 overflow-hidden">
+            <Picture
+              src={carlosImg}
+              formats={["avif", "webp"]}
+              alt="A description of my image."
+            />
+          </div>
           <div class="flex flex-col gap-2">
             <h1
               class:list={[
