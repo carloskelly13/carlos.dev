@@ -18,7 +18,7 @@ export const workHistory: WorkHistoryItem[] = [
   {
     startTime: "2022",
     endTime: "2024",
-    company: "Formidable, a NearForm company",
+    company: "Formidable",
     title: "CTO",
     description:
       "I headed up the engineering, design, and product delivery organization and manage the engineering leadership team. Formidable is a global design, product, and engineering agency with a team of over 80 employees servicing clients such as Puma, Starbucks, Walmart, The Atlantic, and TechStyle. I helped lead the company through a successful acquisition by NearForm in 2023.",
