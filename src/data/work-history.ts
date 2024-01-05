@@ -8,12 +8,20 @@ type WorkHistoryItem = {
 
 export const workHistory: WorkHistoryItem[] = [
   {
-    startTime: "2022",
+    startTime: "2024",
     endTime: "present",
-    company: "Formidable, a NearForm company",
-    title: "CTO & Staff Software Engineer",
+    company: "Multiple",
+    title: "Principal Software Engineer",
     description:
-      "I head up the engineering, design, and product delivery organization and manage the engineering leadership team. Formidable is a global design, product, and engineering agency with a team of over 80 employees servicing clients such as Puma, Starbucks, Walmart, The Atlantic, and TechStyle. I helped lead the company through a successful acquisition by NearForm in 2023.",
+      "Full-stack engineering building out the platform and infrastructure for developer-centric load test tooling. Multiple lets you test your application’s performance at scale by generating realistic user patterns to increase uptime and reliability, prevent outages, and improve end-user experience.",
+  },
+  {
+    startTime: "2022",
+    endTime: "2024",
+    company: "Formidable",
+    title: "CTO",
+    description:
+      "I headed up the engineering, design, and product delivery organization and manage the engineering leadership team. Formidable is a global design, product, and engineering agency with a team of over 80 employees servicing clients such as Puma, Starbucks, Walmart, The Atlantic, and TechStyle. I helped lead the company through a successful acquisition by NearForm in 2023.",
   },
   {
     startTime: "2020",
