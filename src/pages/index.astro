@@ -9,7 +9,7 @@ import WorkHistory from "../components/WorkHistory.astro"
 import TechStack from "../components/TechStack.astro"
 import Links from "../components/Links.astro"
 import CommonHead from "../components/CommonHead.astro"
-import carlosImg from "../assets/carlos.png"
+import carlosImg from "../assets/carlos.jpg"
 ---
 
 <html lang="en">
@@ -26,7 +26,9 @@ import carlosImg from "../assets/carlos.png"
         ]}
       >
         <div class="flex flex-row items-center gap-4 md:gap-6 mt-12 md:mt-20">
-          <div class="rounded-full h-24 w-24 md:h-28 md:w-28 overflow-hidden">
+          <div
+            class="bg-stone-800 rounded-full h-24 w-24 md:h-40 md:w-40 overflow-hidden border border-stone-300 dark:border-stone-900"
+          >
             <Picture
               src={carlosImg}
               formats={["avif", "webp"]}
@@ -36,7 +38,7 @@ import carlosImg from "../assets/carlos.png"
           <div class="flex flex-col gap-2">
             <h1
               class:list={[
-                "text-3xl md:text-4xl tracking-tighter font-bold -ml-0.5 text-transparent",
+                "text-3xl md:text-5xl tracking-tighter font-bold -ml-0.5 text-transparent md:pb-1",
                 "bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-700",
                 "bg-clip-text bg-gradient-to-r dark:from-yellow-400 dark:to-yellow-500",
               ]}
@@ -48,7 +50,7 @@ import carlosImg from "../assets/carlos.png"
         </div>
         <p class="text-lg md:text-xl text-left mt-10 mb-4 !leading-relaxed">
           I’m a full-stack software engineer and open-source software maintainer
-          with over 15 years of experience, building apps using web and native
+          with over 16 years of experience, building apps using web and native
           platform technologies. My background is leading engineering teams and
           organizations to build and ship performant, accessible, and scalable
           software applications. I’m a software engineer at
