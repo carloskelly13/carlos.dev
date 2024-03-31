@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon"
+import { Icon } from "astro-icon/components"
 import { containerSelectors, headerSelectors } from "./GlobalStyles.astro"
 import { workHistory } from "../data/work-history"
 ---
@@ -13,15 +13,15 @@ import { workHistory } from "../data/work-history"
           <div class="col-span-1 text-sm">
             {item.startTime}
             <Icon
-              name="ph:arrow-right-bold"
+              name="iconamoon:arrow-right-1-bold"
               class="inline h-4 -mt-0.5 text-yellow-700 dark:text-yellow-400 mx-1"
             />
             {item.endTime}
           </div>
           <div class="col-span-3">
             <h3 class="font-bold">{item.company}</h3>
-            <h4 class="font-bold text-sm">{item.title}</h4>
-            <p class="text-sm mt-1 leading-6 break-keep">{item.description}</p>
+            <h4 class="font-bold text-md">{item.title}</h4>
+            <p class="text-base mt-1 leading-6 break-keep">{item.description}</p>
           </div>
         </div>
       ))

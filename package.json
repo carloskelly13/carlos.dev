@@ -10,14 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.5.5",
-    "astro-icon": "^0.8.1",
-    "react-icons": "^4.10.1",
-    "sharp": "^0.32.6",
-    "tailwindcss": "^3.0.24"
+    "@astrojs/tailwind": "5.1.0",
+    "astro": "4.5.12",
+    "astro-icon": "1.1.0",
+    "react-icons": "5.0.1",
+    "sharp": "0.33.3",
+    "tailwindcss": "3.4.3"
   },
   "devDependencies": {
+    "@iconify-json/heroicons": "^1.1.20",
+    "@iconify-json/iconamoon": "^1.1.4",
+    "@iconify-json/teenyicons": "^1.1.9",
+    "@phosphor-icons/core": "^2.1.1",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "eslint": "8.46.0",
@@ -26,6 +30,6 @@
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.1",
-    "prettier-plugin-astro": "^0.11.0"
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

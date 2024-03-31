@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon"
+import { Icon } from "astro-icon/components"
 
 type Props = {
   href: string
@@ -24,7 +24,7 @@ const classList = Astro.props["class:list"]
     <slot />
   </span>
   <Icon
-    name="mdi:arrow-top-right"
-    class="inline transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -mt-0.5 h-4 group-hover:text-yellow-700 dark:group-hover:text-yellow-400"
+    name="iconamoon:arrow-top-right-1-bold"
+    class="inline w-4 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -mt-0.5 h-5 group-hover:text-yellow-700 dark:group-hover:text-yellow-400"
   /><slot name="post-arrow" />
 </a>

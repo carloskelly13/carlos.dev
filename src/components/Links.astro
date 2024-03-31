@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon"
+import { Icon } from "astro-icon/components"
 
 const iconSelectors =
   "h-6 inline group-hover:scale-110 transition-all group-hover:text-yellow-700 dark:group-hover:text-yellow-400"
@@ -12,7 +12,7 @@ const iconSelectors =
     href="https://www.github.com/carloskelly13"
     target="_blank"
   >
-    <Icon name="fa-brands:github" slot="icon" class:list={[iconSelectors]} />
+    <Icon size={24} name="teenyicons:github-outline" slot="icon" class:list={[iconSelectors]} />
   </a>
   <a
     title="LinkedIn"
@@ -20,7 +20,7 @@ const iconSelectors =
     href="https://www.linkedin.com/in/carlos-kelly-a10270b8/"
     target="_blank"
   >
-    <Icon name="uiw:linkedin" slot="icon" class:list={[iconSelectors]} />
+    <Icon size={24} name="teenyicons:linkedin-outline" slot="icon" class:list={[iconSelectors]} />
   </a>
   <a
     title="Instagram"
@@ -28,31 +28,6 @@ const iconSelectors =
     href="https://www.instagram.com/carloskelly.13"
     target="_blank"
   >
-    <Icon name="ri:instagram-fill" slot="icon" class:list={[iconSelectors]} />
-  </a>
-  <a
-    title="X"
-    class="group"
-    href="https://x.com/carloskelly_13"
-    target="_blank"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      slot="icon"
-      class:list={[iconSelectors]}
-    >
-      <path
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="m4 4l11.733 16H20L8.267 4zm0 16l6.768-6.768m2.46-2.46L20 4"
-      >
-      </path>
-    </svg>
+    <Icon size={24} name="teenyicons:instagram-outline" slot="icon" class:list={[iconSelectors]} />
   </a>
 </section>
