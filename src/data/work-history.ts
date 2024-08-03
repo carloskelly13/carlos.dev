@@ -10,7 +10,7 @@ export const workHistory: WorkHistoryItem[] = [
   {
     startTime: "2024",
     endTime: "present",
-    company: "Jolt.Ai",
+    company: "Jolt AI",
     title: "Principal Software Engineer",
     description:
       "Full-stack engineering building out the platform using Remix, React, Node, and NestJS. Jolt is an AI codegen tool that takes a coding task, generates an editable file-by-file plan for you to review, and then outputs the resulting code to a git branch or local files on your machine.",
