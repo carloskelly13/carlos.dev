@@ -8,12 +8,20 @@ type WorkHistoryItem = {
 
 export const workHistory: WorkHistoryItem[] = [
   {
-    startTime: "2024",
+    startTime: "2025",
     endTime: "present",
+    company: "Ramp",
+    title: "Staff Software Engineer",
+    description:
+      "",
+  },
+  {
+    startTime: "2024",
+    endTime: "2025",
     company: "Jolt AI",
     title: "Principal Software Engineer",
     description:
-      "Full-stack engineering building out the platform using Remix, React, Node, and NestJS. Jolt is an AI codegen tool that takes a coding task, generates an editable file-by-file plan for you to review, and then outputs the resulting code to a git branch or local files on your machine.",
+      "Full-stack engineering building out the platform using Remix, React, Node, and NestJS. Jolt is an AI codegen tool that takes a coding task, generates an editable file-by-file plan for you to review, and then outputs the resulting code to a git branch or local files on your machine. Jolt was acquired by Ramp in late 2025.",
   },
   {
     startTime: "2022",
