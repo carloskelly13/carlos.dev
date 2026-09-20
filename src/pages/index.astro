@@ -32,7 +32,12 @@ import carlosImg from "../assets/carlos.jpg"
             <Picture
               src={carlosImg}
               formats={["avif", "webp"]}
-              alt="A description of my image."
+              widths={[96, 160, 192, 320]}
+              sizes="(min-width: 768px) 160px, 96px"
+              alt="Carlos Kelly"
+              class="h-full w-full object-cover"
+              loading="eager"
+              fetchpriority="high"
             />
           </div>
           <div class="flex flex-col gap-2">
